@@ -1,0 +1,11 @@
+[package]
+name = "radix-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Radix calculator engine: numerics, expression language, formatting, units (clean-room implementation of the documented GNOME Calculator behavior)"
+
+[dependencies]
+rug = { workspace = true }
+ureq = { version = "2", default-features = false, features = ["tls", "gzip"] }

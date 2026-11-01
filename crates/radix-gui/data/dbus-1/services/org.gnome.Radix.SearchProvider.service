@@ -1,0 +1,6 @@
+# D-Bus service activation for the Radix search provider (doc 08 §6).
+# Install to $prefix/share/dbus-1/services/ with @bindir@ substituted by the
+# installation bindir, e.g. Exec=/usr/local/bin/radix-search-provider.
+[D-BUS Service]
+Name=org.gnome.Radix.SearchProvider
+Exec=@bindir@/radix-search-provider

@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = ["crates/radix-core", "crates/radix-cli", "crates/radix-gui"]
+
+[workspace.package]
+version = "51.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Radix Team B"]
+
+[workspace.dependencies]
+rug = "1.28"
+
+[profile.release]
+lto = "thin"
