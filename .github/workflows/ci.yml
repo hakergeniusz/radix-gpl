@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build-and-test:
+    name: Build, test, smoke
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libgtk-4-dev \
+            libadwaita-1-dev \
+            m4 \
+            pkg-config
+
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Build
+        run: cargo build --locked --all-targets
+
+      - name: Run tests
+        run: cargo test --locked
+
+      # Headless smoke tests: --version exits from the option parser before
+      # GTK needs a display; the one-shot REPL mode solves from argv.
+      - name: Smoke test (--version)
+        run: ./target/debug/radix --version
+
+      - name: Smoke test (radix-cmd)
+        run: |
+          out=$(./target/debug/radix-cmd "2+2")
+          [ "$out" = "4" ]

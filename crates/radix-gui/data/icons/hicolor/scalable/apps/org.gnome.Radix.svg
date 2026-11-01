@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Original Radix icon artwork (GPL-3.0-or-later, like the rest of the project):
+     a calculator tile — display strip with cursor, key grid, accent = key. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="#3d3a45"/>
+  <rect x="24" y="24" width="80" height="26" rx="7" fill="#241f31"/>
+  <rect x="86" y="34" width="11" height="6" rx="2" fill="#d56199"/>
+  <rect x="24" y="62" width="22" height="16" rx="5" fill="#64597a"/>
+  <rect x="53" y="62" width="22" height="16" rx="5" fill="#64597a"/>
+  <rect x="82" y="62" width="22" height="16" rx="5" fill="#64597a"/>
+  <rect x="24" y="86" width="22" height="16" rx="5" fill="#64597a"/>
+  <rect x="53" y="86" width="22" height="16" rx="5" fill="#64597a"/>
+  <rect x="82" y="86" width="22" height="16" rx="5" fill="#d56199"/>
+</svg>
