@@ -18,9 +18,7 @@ depends=('gtk4' 'libadwaita')
 makedepends=('cargo' 'm4')
 options=('!lto')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/$_tag.tar.gz")
-# SKIP until the v51.1.1 tag is pushed; re-pin with `updpkgsums` (or the
-# release source archive) right after tagging.
-sha256sums=('SKIP')
+sha256sums=('47010103a3243e9458ae10d26df30bfc59f7c66d820839ef823473d50bf91d9e')
 
 prepare() {
   cd "$pkgname-$pkgver"
