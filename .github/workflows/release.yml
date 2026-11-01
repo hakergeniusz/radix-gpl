@@ -105,10 +105,16 @@ jobs:
 
       - name: Build package
         run: |
+          V="${GITHUB_REF_NAME#v}"
+          # The repo is private, so makepkg's unauthenticated fetch of the
+          # github.com tag archive would 404; pre-place the tarball (same
+          # tree, radix-<V>/ layout) and makepkg uses it as a cached source
+          # (sha256sums SKIP). Once the repo is public the fetch is live and
+          # the pinned checksum takes over.
+          git archive --prefix="radix-${V}/" -o "packaging/arch/radix-${V}.tar.gz" HEAD
           useradd -m builder
           chown -R builder:builder .
-          # makepkg refuses root; the PKGBUILD downloads the tag archive and
-          # verifies it (sha256sums SKIP until updpkgsums pins a checksum).
+          # makepkg refuses root.
           su builder -c "cd packaging/arch && makepkg -f --noconfirm"
           cp packaging/arch/radix-*.pkg.tar.zst ./
 
