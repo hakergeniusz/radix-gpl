@@ -49,17 +49,17 @@ package() {
   install -Dm755 target/release/radix -t "$pkgdir/usr/bin"
   install -Dm755 target/release/radix-cmd -t "$pkgdir/usr/bin"
   install -Dm755 target/release/radix-search-provider -t "$pkgdir/usr/bin"
-  install -Dm644 crates/radix-gui/data/applications/org.gnome.Radix.desktop \
-    "$pkgdir/usr/share/applications/org.gnome.Radix.desktop"
+  install -Dm644 crates/radix-gui/data/applications/io.github.hakergeniusz.Radix.desktop \
+    "$pkgdir/usr/share/applications/io.github.hakergeniusz.Radix.desktop"
   install -d "$pkgdir/usr/share/dbus-1/services"
   sed 's|@bindir@|/usr/bin|' \
-    crates/radix-gui/data/dbus-1/services/org.gnome.Radix.SearchProvider.service \
-    > "$pkgdir/usr/share/dbus-1/services/org.gnome.Radix.SearchProvider.service"
-  install -Dm644 crates/radix-gui/data/metainfo/org.gnome.Radix.metainfo.xml \
-    "$pkgdir/usr/share/metainfo/org.gnome.Radix.metainfo.xml"
-  install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/org.gnome.Radix.svg \
-    "$pkgdir/usr/share/icons/hicolor/scalable/apps/org.gnome.Radix.svg"
-  install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg \
-    "$pkgdir/usr/share/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg"
+    crates/radix-gui/data/dbus-1/services/io.github.hakergeniusz.Radix.SearchProvider.service \
+    > "$pkgdir/usr/share/dbus-1/services/io.github.hakergeniusz.Radix.SearchProvider.service"
+  install -Dm644 crates/radix-gui/data/metainfo/io.github.hakergeniusz.Radix.metainfo.xml \
+    "$pkgdir/usr/share/metainfo/io.github.hakergeniusz.Radix.metainfo.xml"
+  install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg \
+    "$pkgdir/usr/share/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg"
+  install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg \
+    "$pkgdir/usr/share/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg"
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/radix/LICENSE"
 }

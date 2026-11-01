@@ -151,9 +151,9 @@ jobs:
           V="${GITHUB_REF_NAME#v}"
           flatpak-builder --user --install-deps-from=flathub \
             --force-clean --repo=repo builddir \
-            packaging/flatpak/org.gnome.Radix.json
+            packaging/flatpak/io.github.hakergeniusz.Radix.json
           flatpak build-bundle repo "radix-${V}-x86_64.flatpak" \
-            org.gnome.Radix
+            io.github.hakergeniusz.Radix
 
       - uses: actions/upload-artifact@v4
         with:

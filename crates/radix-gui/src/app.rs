@@ -25,7 +25,7 @@ pub fn run(equation: Option<String>, mode: Option<ButtonMode>) -> std::process::
     // with plain gtk::Application the Adw widgets render unstyled (stock
     // GTK Adwaita, always light) regardless of the color scheme.
     let app = adw::Application::builder()
-        .application_id("org.gnome.Radix")
+        .application_id("io.github.hakergeniusz.Radix")
         .flags(gio::ApplicationFlags::NON_UNIQUE)
         .build();
 

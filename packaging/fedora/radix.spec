@@ -42,18 +42,18 @@ cargo build --release --locked
 install -Dm755 target/release/radix %{buildroot}%{_bindir}/radix
 install -Dm755 target/release/radix-cmd %{buildroot}%{_bindir}/radix-cmd
 install -Dm755 target/release/radix-search-provider %{buildroot}%{_bindir}/radix-search-provider
-install -Dm644 crates/radix-gui/data/applications/org.gnome.Radix.desktop \
-  %{buildroot}%{_datadir}/applications/org.gnome.Radix.desktop
+install -Dm644 crates/radix-gui/data/applications/io.github.hakergeniusz.Radix.desktop \
+  %{buildroot}%{_datadir}/applications/io.github.hakergeniusz.Radix.desktop
 install -d %{buildroot}%{_datadir}/dbus-1/services
 sed 's|@bindir@|%{_bindir}|' \
-  crates/radix-gui/data/dbus-1/services/org.gnome.Radix.SearchProvider.service \
-  > %{buildroot}%{_datadir}/dbus-1/services/org.gnome.Radix.SearchProvider.service
-install -Dm644 crates/radix-gui/data/metainfo/org.gnome.Radix.metainfo.xml \
-  %{buildroot}%{_datadir}/metainfo/org.gnome.Radix.metainfo.xml
-install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/org.gnome.Radix.svg \
-  %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/org.gnome.Radix.svg
-install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg \
-  %{buildroot}%{_datadir}/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg
+  crates/radix-gui/data/dbus-1/services/io.github.hakergeniusz.Radix.SearchProvider.service \
+  > %{buildroot}%{_datadir}/dbus-1/services/io.github.hakergeniusz.Radix.SearchProvider.service
+install -Dm644 crates/radix-gui/data/metainfo/io.github.hakergeniusz.Radix.metainfo.xml \
+  %{buildroot}%{_datadir}/metainfo/io.github.hakergeniusz.Radix.metainfo.xml
+install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg \
+  %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg
+install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg \
+  %{buildroot}%{_datadir}/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg
 
 %check
 ./target/release/radix --version
@@ -65,11 +65,11 @@ install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/org.gnome.Radix
 %{_bindir}/radix
 %{_bindir}/radix-cmd
 %{_bindir}/radix-search-provider
-%{_datadir}/applications/org.gnome.Radix.desktop
-%{_datadir}/dbus-1/services/org.gnome.Radix.SearchProvider.service
-%{_datadir}/metainfo/org.gnome.Radix.metainfo.xml
-%{_datadir}/icons/hicolor/scalable/apps/org.gnome.Radix.svg
-%{_datadir}/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg
+%{_datadir}/applications/io.github.hakergeniusz.Radix.desktop
+%{_datadir}/dbus-1/services/io.github.hakergeniusz.Radix.SearchProvider.service
+%{_datadir}/metainfo/io.github.hakergeniusz.Radix.metainfo.xml
+%{_datadir}/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg
+%{_datadir}/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg
 
 %changelog
 * Sat Nov 01 2026 hakergeniusz <hakergeniusz@users.noreply.github.com> - 51.1.1-1

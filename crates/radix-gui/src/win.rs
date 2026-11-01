@@ -245,7 +245,7 @@ impl CalcWindow {
         // Development builds carry the platform devel watermark (doc 13 §3.1).
         #[cfg(debug_assertions)]
         window.add_css_class("devel");
-        window.set_icon_name(Some("org.gnome.Radix"));
+        window.set_icon_name(Some("io.github.hakergeniusz.Radix"));
 
         // --- header bar (doc 13 §3.2) ------------------------------------
         let header = adw::HeaderBar::new();
