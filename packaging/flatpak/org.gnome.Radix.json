@@ -1,0 +1,52 @@
+{
+  "id": "org.gnome.Radix",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "51",
+  "sdk": "org.gnome.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "radix",
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "append-ld-library-path": "/usr/lib/sdk/rust-stable/lib",
+    "env": {
+      "CARGO_HOME": "/run/build/radix/cargo"
+    }
+  },
+  "finish-args": [
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--device=dri",
+    "--share=network",
+    "--own-name=org.gnome.Radix.SearchProvider"
+  ],
+  "modules": [
+    {
+      "name": "radix",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p .cargo && cp packaging/flatpak/cargo-vendor-config.toml .cargo/config.toml",
+        "cargo build --offline --release --locked",
+        "install -Dm755 target/release/radix ${FLATPAK_DEST}/bin/radix",
+        "install -Dm755 target/release/radix-cmd ${FLATPAK_DEST}/bin/radix-cmd",
+        "install -Dm755 target/release/radix-search-provider ${FLATPAK_DEST}/bin/radix-search-provider",
+        "install -Dm644 crates/radix-gui/data/applications/org.gnome.Radix.desktop ${FLATPAK_DEST}/share/applications/org.gnome.Radix.desktop",
+        "install -d ${FLATPAK_DEST}/share/dbus-1/services && sed 's|@bindir@|/app/bin|' crates/radix-gui/data/dbus-1/services/org.gnome.Radix.SearchProvider.service > ${FLATPAK_DEST}/share/dbus-1/services/org.gnome.Radix.SearchProvider.service",
+        "install -Dm644 crates/radix-gui/data/metainfo/org.gnome.Radix.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.gnome.Radix.metainfo.xml",
+        "install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/org.gnome.Radix.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/org.gnome.Radix.svg",
+        "install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg ${FLATPAK_DEST}/share/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg",
+        "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/org.gnome.Radix/LICENSE"
+      ],
+      "sources": [
+        {
+          "type": "dir",
+          "path": "../..",
+          "skip": [".git", "target", "builddir", "repo"]
+        },
+        "generated-sources.json"
+      ]
+    }
+  ]
+}

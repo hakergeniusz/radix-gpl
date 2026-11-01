@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+# dh's cargo helpers are bypassed: the build is a plain cargo call so the
+# same --locked release build feeds the deb, the RPM, the Arch package and
+# the Flatpak bundle.
+
+override_dh_auto_clean:
+
+override_dh_auto_configure:
+
+override_dh_auto_build:
+	cargo build --release --locked
+
+override_dh_auto_test:
+	./target/release/radix --version
+	./target/release/radix-cmd "2+2" | grep -qx 4
+
+override_dh_auto_install:
+	install -Dm755 target/release/radix \
+		debian/radix/usr/bin/radix
+	install -Dm755 target/release/radix-cmd \
+		debian/radix/usr/bin/radix-cmd
+	install -Dm755 target/release/radix-search-provider \
+		debian/radix/usr/bin/radix-search-provider
+	install -Dm644 crates/radix-gui/data/applications/org.gnome.Radix.desktop \
+		debian/radix/usr/share/applications/org.gnome.Radix.desktop
+	install -d debian/radix/usr/share/dbus-1/services
+	sed 's|@bindir@|/usr/bin|' \
+		crates/radix-gui/data/dbus-1/services/org.gnome.Radix.SearchProvider.service \
+		> debian/radix/usr/share/dbus-1/services/org.gnome.Radix.SearchProvider.service
+	install -Dm644 crates/radix-gui/data/metainfo/org.gnome.Radix.metainfo.xml \
+		debian/radix/usr/share/metainfo/org.gnome.Radix.metainfo.xml
+	install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/org.gnome.Radix.svg \
+		debian/radix/usr/share/icons/hicolor/scalable/apps/org.gnome.Radix.svg
+	install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg \
+		debian/radix/usr/share/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg
