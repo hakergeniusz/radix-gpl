@@ -273,20 +273,26 @@ pub fn open_shortcuts(parent: &impl gtk::glib::object::IsA<gtk::Window>) {
     win.present();
 }
 
-/// About dialog (doc 06 §3).
+/// About window (doc 06 §3): libadwaita's AdwAboutWindow, the GNOME 51
+/// reference look — app icon, name, developer, version chip and the
+/// Website / Report an Issue / Credits / Legal rows.
 pub fn open_about(parent: &impl gtk::glib::object::IsA<gtk::Window>) {
-    let about = gtk::AboutDialog::new();
-    about.set_program_name(Some("Calculator"));
-    about.set_version(Some(env!("CARGO_PKG_VERSION")));
-    // doc 06 §3 mirrors upstream's GPL-3.0 About display; Radix itself is
-    // MIT (D26), so the dialog states Radix's own license.
-    about.set_license_type(gtk::License::Gpl30);
-    about.set_comments(Some(
-        "Calculator for GNOME — Radix implementation",
-    ));
-    about.set_website(Some("https://example.org/radix"));
+    // doc 06 §3 mirrors upstream's About display; Radix itself is GPL-3.0-or-later
+    // (D26), so the Legal page states Radix's own license.
+    let about = adw::AboutWindow::builder()
+        .transient_for(parent)
+        .modal(true)
+        .application_icon("org.gnome.Radix")
+        .application_name("Calculator")
+        .developer_name("hakergeniusz")
+        .version(env!("CARGO_PKG_VERSION"))
+        .website("https://github.com/hakergeniusz/radix-gpl")
+        .issue_url("https://github.com/hakergeniusz/radix-gpl/issues")
+        .copyright("© 2026 The Radix Authors")
+        .license_type(gtk::License::Gpl30)
+        .build();
     about.add_credit_section(
-        "Exchange Rate Data Providers",
+        Some("Exchange Rate Data Providers"),
         &[
             "European Central Bank",
             "International Monetary Fund",
@@ -294,6 +300,5 @@ pub fn open_about(parent: &impl gtk::glib::object::IsA<gtk::Window>) {
             "Bank of Canada",
         ],
     );
-    about.set_transient_for(Some(parent));
     about.present();
 }
