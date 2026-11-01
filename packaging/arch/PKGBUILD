@@ -18,9 +18,10 @@ depends=('gtk4' 'libadwaita')
 makedepends=('cargo' 'm4')
 options=('!lto')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/$_tag.tar.gz")
-# SKIP until the v51.1.0 tag is pushed; run `updpkgsums` in packaging/arch
-# right after tagging to pin the archive checksum.
-sha256sums=('SKIP')
+# Checksum of the v51.1.0 tag archive (github.com archive/refs/tags URL,
+# radix-51.1.0/ layout). On a version bump, re-pin with `updpkgsums` right
+# after pushing the new tag.
+sha256sums=('0a649f2ab2169ad2ee3f0ad62252cb59f77d8f7512acc42b981106e3a42bc29e')
 
 prepare() {
   cd "$pkgname-$pkgver"
