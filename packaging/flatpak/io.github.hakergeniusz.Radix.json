@@ -1,5 +1,5 @@
 {
-  "id": "org.gnome.Radix",
+  "id": "io.github.hakergeniusz.Radix",
   "runtime": "org.gnome.Platform",
   "runtime-version": "51",
   "sdk": "org.gnome.Sdk",
@@ -20,7 +20,7 @@
     "--socket=wayland",
     "--device=dri",
     "--share=network",
-    "--own-name=org.gnome.Radix.SearchProvider"
+    "--own-name=io.github.hakergeniusz.Radix.SearchProvider"
   ],
   "modules": [
     {
@@ -32,12 +32,12 @@
         "install -Dm755 target/release/radix ${FLATPAK_DEST}/bin/radix",
         "install -Dm755 target/release/radix-cmd ${FLATPAK_DEST}/bin/radix-cmd",
         "install -Dm755 target/release/radix-search-provider ${FLATPAK_DEST}/bin/radix-search-provider",
-        "install -Dm644 crates/radix-gui/data/applications/org.gnome.Radix.desktop ${FLATPAK_DEST}/share/applications/org.gnome.Radix.desktop",
-        "install -d ${FLATPAK_DEST}/share/dbus-1/services && sed 's|@bindir@|/app/bin|' crates/radix-gui/data/dbus-1/services/org.gnome.Radix.SearchProvider.service > ${FLATPAK_DEST}/share/dbus-1/services/org.gnome.Radix.SearchProvider.service",
-        "install -Dm644 crates/radix-gui/data/metainfo/org.gnome.Radix.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.gnome.Radix.metainfo.xml",
-        "install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/org.gnome.Radix.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/org.gnome.Radix.svg",
-        "install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg ${FLATPAK_DEST}/share/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg",
-        "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/org.gnome.Radix/LICENSE"
+        "install -Dm644 crates/radix-gui/data/applications/io.github.hakergeniusz.Radix.desktop ${FLATPAK_DEST}/share/applications/io.github.hakergeniusz.Radix.desktop",
+        "install -d ${FLATPAK_DEST}/share/dbus-1/services && sed 's|@bindir@|/app/bin|' crates/radix-gui/data/dbus-1/services/io.github.hakergeniusz.Radix.SearchProvider.service > ${FLATPAK_DEST}/share/dbus-1/services/io.github.hakergeniusz.Radix.SearchProvider.service",
+        "install -Dm644 crates/radix-gui/data/metainfo/io.github.hakergeniusz.Radix.metainfo.xml ${FLATPAK_DEST}/share/metainfo/io.github.hakergeniusz.Radix.metainfo.xml",
+        "install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg",
+        "install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg ${FLATPAK_DEST}/share/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg",
+        "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/io.github.hakergeniusz.Radix/LICENSE"
       ],
       "sources": [
         {

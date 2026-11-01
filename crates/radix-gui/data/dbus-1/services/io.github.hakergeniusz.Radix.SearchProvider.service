@@ -2,5 +2,5 @@
 # Install to $prefix/share/dbus-1/services/ with @bindir@ substituted by the
 # installation bindir, e.g. Exec=/usr/local/bin/radix-search-provider.
 [D-BUS Service]
-Name=org.gnome.Radix.SearchProvider
+Name=io.github.hakergeniusz.Radix.SearchProvider
 Exec=@bindir@/radix-search-provider

@@ -1,7 +1,7 @@
 //! `radix-search-provider` — GNOME Shell search provider (doc 08 §6).
 //!
-//! Owns `org.gnome.Radix.SearchProvider` on the session bus and serves
-//! `org.gnome.Shell.SearchProvider2` at `/org/gnome/Radix/SearchProvider`
+//! Owns `io.github.hakergeniusz.Radix.SearchProvider` on the session bus and serves
+//! `org.gnome.Shell.SearchProvider2` at `/io/github/hakergeniusz/Radix/SearchProvider`
 //! (activation via the installed D-Bus service file). At most one result per
 //! query — the candidate expression plus a companion "Open in Calculator"
 //! entry. Queries are rejected without results when the normalized text
@@ -32,11 +32,11 @@ use std::rc::Rc;
 use std::time::Duration;
 use std::time::Instant;
 
-const SERVICE_NAME: &str = "org.gnome.Radix.SearchProvider";
-const OBJECT_PATH: &str = "/org/gnome/Radix/SearchProvider";
+const SERVICE_NAME: &str = "io.github.hakergeniusz.Radix.SearchProvider";
+const OBJECT_PATH: &str = "/io/github/hakergeniusz/Radix/SearchProvider";
 const INTERFACE: &str = "org.gnome.Shell.SearchProvider2";
 const OPEN_PREFIX: &str = "open-in-calculator-";
-const APP_ICON: &str = "org.gnome.Radix";
+const APP_ICON: &str = "io.github.hakergeniusz.Radix";
 const COPY_ICON: &str = "edit-copy-symbolic";
 const CACHE_LIMIT: usize = 10;
 const IDLE_EXIT: Duration = Duration::from_secs(10);

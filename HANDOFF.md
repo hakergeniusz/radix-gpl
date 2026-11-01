@@ -227,8 +227,8 @@ the binary (D19).
    dbus-run-session -- bash -c '
      target/debug/radix-search-provider &
      sleep 2
-     gdbus call --session --dest org.gnome.Radix.SearchProvider \
-       --object-path /org/gnome/Radix/SearchProvider \
+     gdbus call --session --dest io.github.hakergeniusz.Radix.SearchProvider \
+       --object-path /io/github/hakergeniusz/Radix/SearchProvider \
        --method org.gnome.Shell.SearchProvider2.GetInitialResultSet "['"'"'2+2'"'"']"
      # → ([<'"'"'2+2'"'"'>, <'"'"'open-in-calculator-2+2'"'"'>],)
      # GetResultMetas with the equation id → description " = 4", clipboardText

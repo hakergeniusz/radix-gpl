@@ -282,7 +282,7 @@ pub fn open_about(parent: &impl gtk::glib::object::IsA<gtk::Window>) {
     let about = adw::AboutWindow::builder()
         .transient_for(parent)
         .modal(true)
-        .application_icon("org.gnome.Radix")
+        .application_icon("io.github.hakergeniusz.Radix")
         .application_name("Calculator")
         .developer_name("hakergeniusz")
         .version(env!("CARGO_PKG_VERSION"))

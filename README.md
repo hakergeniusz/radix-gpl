@@ -27,11 +27,9 @@ service ship inside every package; the GUI binary is `radix`, the REPL is
 
 The release pipeline (`.github/workflows/release.yml`) builds all four
 formats from a `v*` tag; the sources live in `debian/`, `packaging/fedora/`,
-`packaging/arch/` and `packaging/flatpak/`. Note: `packaging/flatpak/` uses
-the `org.gnome.Radix` app id to match the rest of the app (decision D21);
-submitting to Flathub proper would require re-prefixing the id (e.g.
-`io.github.hakergeniusz.Radix`) per Flathub's namespace policy — a
-data-only change in the manifest and data files.
+`packaging/arch/` and `packaging/flatpak/`. The app id is
+`io.github.hakergeniusz.Radix` everywhere (decision D29), which is the
+form Flathub's namespace policy accepts.
 
 ## Build
 
@@ -75,8 +73,8 @@ radix-cmd          # REPL: `> ` prompt; `exit`, `quit`, empty line, or EOF exits
 
 ### Search provider
 
-`radix-search-provider` owns `org.gnome.Radix.SearchProvider` and serves
-`org.gnome.Shell.SearchProvider2` at `/org/gnome/Radix/SearchProvider`. A
+`radix-search-provider` owns `io.github.hakergeniusz.Radix.SearchProvider` and serves
+`org.gnome.Shell.SearchProvider2` at `/io/github/hakergeniusz/Radix/SearchProvider`. A
 D-Bus service file (`crates/radix-gui/data/dbus-1/services/`) with an
 `@bindir@` placeholder ships for install-time substitution. Shell queries
 evaluate exactly like `--solve` (50 ms budget); activating a result copies it
