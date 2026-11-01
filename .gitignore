@@ -1,0 +1,32 @@
+# Build artifacts
+/target/
+/dist/
+/build/
+/vendor/
+
+# Analysis hygiene: Team A's raw analysis notes derived from the original
+# source stay out of the repository (HANDOFF.md: docs/ is the only reference).
+/notes/
+
+# Secrets — never commit
+.env
+.env.*
+secrets.*
+secret.*
+*.key
+*.pem
+*.secret
+*.enc
+id_*
+.ssh/
+.npmrc
+.aws/
+.gcp/
+*.p12
+*.jks
+
+# Noise
+__pycache__/
+*.log
+*.tmp
+*.cache
