@@ -7,8 +7,8 @@
 # Maintainer: hakergeniusz <hakergeniusz@users.noreply.github.com>
 
 pkgname=radix
-_tag=v51.1.0
-pkgver=51.1.0
+_tag=v51.1.1
+pkgver=51.1.1
 pkgrel=1
 pkgdesc="Desktop calculator with scientific, financial and programming modes (GNOME Calculator reimplementation)"
 arch=('x86_64')
@@ -18,10 +18,9 @@ depends=('gtk4' 'libadwaita')
 makedepends=('cargo' 'm4')
 options=('!lto')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/$_tag.tar.gz")
-# Checksum of the v51.1.0 tag archive (github.com archive/refs/tags URL,
-# radix-51.1.0/ layout). On a version bump, re-pin with `updpkgsums` right
-# after pushing the new tag.
-sha256sums=('0a649f2ab2169ad2ee3f0ad62252cb59f77d8f7512acc42b981106e3a42bc29e')
+# SKIP until the v51.1.1 tag is pushed; re-pin with `updpkgsums` (or the
+# release source archive) right after tagging.
+sha256sums=('SKIP')
 
 prepare() {
   cd "$pkgname-$pkgver"

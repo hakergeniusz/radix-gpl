@@ -38,6 +38,13 @@
   </provides>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="51.1.1" date="2026-11-01">
+      <description>
+        <p>The About page was rebuilt on libadwaita's AboutWindow: app icon,
+        accent version chip and the Website / Report an Issue / Credits /
+        Legal rows, with real GitHub website and issue-tracker links.</p>
+      </description>
+    </release>
     <release version="51.1.0" date="2026-11-01">
       <description>
         <p>First packaged release: the full engine (expression language,

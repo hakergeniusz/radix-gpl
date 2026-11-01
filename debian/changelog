@@ -1,3 +1,11 @@
+radix (51.1.1-1) unstable; urgency=medium
+
+  * About page rebuilt on libadwaita's AboutWindow (D28): app icon, accent
+    version chip and the Website / Report an Issue / Credits / Legal rows;
+    real GitHub website and issue-tracker links.
+
+ -- hakergeniusz <hakergeniusz@users.noreply.github.com>  Sat, 01 Nov 2026 18:00:00 +0000
+
 radix (51.1.0-1) unstable; urgency=medium
 
   * Initial packaged release: the engine (expression language,
