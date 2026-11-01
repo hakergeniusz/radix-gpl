@@ -5,14 +5,17 @@
 
 # dh's cargo helpers are bypassed: the build is a plain cargo call so the
 # same --locked release build feeds the deb, the RPM, the Arch package and
-# the Flatpak bundle.
-
+# the Flatpak bundle. dpkg-buildpackage's exported hardening flags
+# (CFLAGS/CPPFLAGS/LDFLAGS) are stripped: they leak into gmp-mpfr-sys's
+# bundled GMP build and break GMP's own self-test suite (t-cmp et al. on
+# ubuntu-24.04); without them the identical build and check pass.
 override_dh_auto_clean:
 
 override_dh_auto_configure:
 
 override_dh_auto_build:
-	cargo build --release --locked
+	env -u CFLAGS -u CPPFLAGS -u CXXFLAGS -u LDFLAGS \
+		cargo build --release --locked
 
 override_dh_auto_test:
 	./target/release/radix --version
