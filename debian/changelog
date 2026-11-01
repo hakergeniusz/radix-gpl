@@ -1,0 +1,9 @@
+radix (51.1.0-1) unstable; urgency=medium
+
+  * Initial packaged release: the engine (expression language,
+    exact MPFR/Rational numerics, four number formats, units and currency,
+    financial functions), the six-mode GTK4 GUI at GNOME 51 visual parity,
+    the radix-cmd REPL, the headless --solve CLI and the GNOME Shell
+    search provider.
+
+ -- hakergeniusz <hakergeniusz@users.noreply.github.com>  Sun, 01 Nov 2026 12:00:00 +0000

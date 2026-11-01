@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AppStream metadata for Radix. The version here tracks the git tag
+     (v51.1.0 -> 51.1.0); bump it together with Cargo.toml,
+     debian/changelog, the Fedora spec and the Arch PKGBUILD. -->
+<component type="desktop-application">
+  <id>org.gnome.Radix</id>
+  <name>Calculator</name>
+  <summary>Arithmetic, scientific, financial and programming calculations</summary>
+  <metadata_license>MIT</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer id="io.github.hakergeniusz">
+    <name>hakergeniusz</name>
+  </developer>
+  <description>
+    <p>Radix is a desktop calculator that reimplements the behavior of GNOME
+    Calculator (target: upstream v51.1 semantics) in Rust. It ships a GTK4
+    GUI, a command-line REPL, a headless
+    solve CLI and a GNOME Shell search provider from one engine.</p>
+    <ul>
+      <li>Six modes: basic, advanced, financial, programming, keyboard input
+      and unit conversion</li>
+      <li>Exact rational arithmetic with an MPFR numeric core at 2000-bit
+      precision, complex numbers and factorization</li>
+      <li>Unit and currency conversion with four exchange-rate providers</li>
+      <li>Programming mode with bit panel, binary/octal/decimal/hexadecimal
+      bases and 8–64-bit word sizes</li>
+      <li>Variables, user functions, undo/redo and a persistent per-window
+      history tape</li>
+      <li>GNOME Shell search provider returning answers straight from the
+      search field</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">org.gnome.Radix.desktop</launchable>
+  <provides>
+    <binary>radix</binary>
+    <binary>radix-cmd</binary>
+    <binary>radix-search-provider</binary>
+  </provides>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="51.1.0" date="2026-11-01">
+      <description>
+        <p>First packaged release: the full engine (expression language,
+        exact numerics, four number formats, units and currency, financial
+        functions), the six-mode GTK4 GUI at GNOME 51 visual parity, the
+        radix-cmd REPL, the headless --solve CLI and the GNOME Shell search
+        provider. Packages are provided for Debian, Fedora, Arch Linux and
+        Flatpak.</p>
+      </description>
+    </release>
+  </releases>
+  <url type="homepage">https://github.com/hakergeniusz/radix-gpl</url>
+  <url type="bugtracker">https://github.com/hakergeniusz/radix-gpl/issues</url>
+  <url type="translate">https://github.com/hakergeniusz/radix-gpl</url>
+</component>
