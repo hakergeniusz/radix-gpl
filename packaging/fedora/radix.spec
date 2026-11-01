@@ -1,17 +1,17 @@
 # Spec for building Radix RPM packages. The version fields below track
-# the git tag (v51.1.0 -> Version 51.1.0); bump them together with
+# the git tag (v51.1.1 -> Version 51.1.1); bump them together with
 # Cargo.toml, debian/changelog, the metainfo releases and the Arch
 # PKGBUILD on each release.
 # m4 is required by gmp-mpfr-sys, which builds its bundled GMP/MPFR/MPC
 # from source at compile time (statically linked; no runtime gmp deps).
 Name:           radix
-Version:        51.1.0
+Version:        51.1.1
 Release:        1%{?dist}
 Summary:        Desktop calculator with scientific, financial and programming modes
 
 License:        MIT
 URL:            https://github.com/hakergeniusz/radix
-Source0:        %{url}/archive/refs/tags/v51.1.0/radix-51.1.0.tar.gz
+Source0:        %{url}/archive/refs/tags/v51.1.1/radix-51.1.1.tar.gz
 
 BuildRequires:  cargo
 BuildRequires:  gcc
@@ -33,7 +33,7 @@ GNOME Shell search provider that answers straight from the search field.}
 %description %{_description}
 
 %prep
-%autosetup -n radix-51.1.0
+%autosetup -n radix-51.1.1
 
 %build
 cargo build --release --locked
@@ -72,6 +72,11 @@ install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/org.gnome.Radix
 %{_datadir}/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg
 
 %changelog
+* Sat Nov 01 2026 hakergeniusz <hakergeniusz@users.noreply.github.com> - 51.1.1-1
+- About page rebuilt on libadwaita's AboutWindow (D28): app icon, accent
+  version chip, Website / Report an Issue / Credits / Legal rows and real
+  GitHub links
+
 * Sat Nov 01 2026 hakergeniusz <hakergeniusz@users.noreply.github.com> - 51.1.0-1
 - Initial packaged release: engine, six-mode GTK4 GUI, radix-cmd REPL,
   headless --solve CLI and the GNOME Shell search provider
