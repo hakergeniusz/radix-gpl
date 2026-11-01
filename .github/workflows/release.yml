@@ -111,6 +111,9 @@ jobs:
           # tree, radix-<V>/ layout) and makepkg uses it as a cached source
           # (sha256sums SKIP). Once the repo is public the fetch is live and
           # the pinned checksum takes over.
+          # In the container git sees the checkout as root-owned -> mark it
+          # safe or archive dies with "dubious ownership" (exit 128).
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git archive --prefix="radix-${V}/" -o "packaging/arch/radix-${V}.tar.gz" HEAD
           useradd -m builder
           chown -R builder:builder .
