@@ -10,6 +10,29 @@ License: MIT (see `LICENSE`; `IMPLEMENTATION_DECISIONS.md` D26 records the
 change from the original GPL-3.0-or-later scaffold choice and the `rug`
 dependency rationale).
 
+## Install
+
+Packages are attached to each [release](https://github.com/hakergeniusz/radix/releases)
+(`.deb` for Debian/Ubuntu, `.rpm` for Fedora/openSUSE, `.pkg.tar.zst` for
+Arch, a standalone `.flatpak` bundle, and a portable tarball with all three
+binaries). Install the Flatpak bundle with:
+
+```sh
+flatpak install ./radix-<version>-x86_64.flatpak
+```
+
+The desktop entry, the app icon and the GNOME Shell search-provider D-Bus
+service ship inside every package; the GUI binary is `radix`, the REPL is
+`radix-cmd`, and the search provider is `radix-search-provider`.
+
+The release pipeline (`.github/workflows/release.yml`) builds all four
+formats from a `v*` tag; the sources live in `debian/`, `packaging/fedora/`,
+`packaging/arch/` and `packaging/flatpak/`. Note: `packaging/flatpak/` uses
+the `org.gnome.Radix` app id to match the rest of the app (decision D21);
+submitting to Flathub proper would require re-prefixing the id (e.g.
+`io.github.hakergeniusz.Radix`) per Flathub's namespace policy — a
+data-only change in the manifest and data files.
+
 ## Build
 
 ```sh
@@ -87,6 +110,6 @@ crates/radix-gui         GTK4 app (window/keypads/converter/dialogs), the
                          headless --solve path, and the search provider
 docs/                    the specification this implementation follows
 REQUIREMENT_COVERAGE.md  requirement-by-requirement status with evidence
-IMPLEMENTATION_DECISIONS.md   decision log D1–D21 (ambiguity resolutions, deviations)
+IMPLEMENTATION_DECISIONS.md   decision log D1–D27 (ambiguity resolutions, deviations)
 HANDOFF.md               architecture, verification playbook, known gaps
 ```

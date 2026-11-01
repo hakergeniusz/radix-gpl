@@ -1,0 +1,6 @@
+debian/radix/
+debian/files
+debian/*.log
+debian/*.substvars
+debian/debhelper-build-stamp
+debian/.debhelper/

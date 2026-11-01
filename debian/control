@@ -1,0 +1,32 @@
+Source: radix
+Section: gnome
+Priority: optional
+Maintainer: hakergeniusz <hakergeniusz@users.noreply.github.com>
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+Homepage: https://github.com/hakergeniusz/radix
+Build-Depends:
+  debhelper-compat (= 13),
+  build-essential,
+  cargo,
+  m4,
+  pkg-config,
+  libgtk-4-dev (>= 4.12),
+  libadwaita-1-dev (>= 1.5)
+
+Package: radix
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Desktop calculator with scientific, financial and programming modes
+ Radix is a clean-room Rust reimplementation of GNOME Calculator's behavior
+ (target: upstream v51.1 semantics). It ships one GTK4 GUI covering six
+ modes (basic, advanced, financial, programming, keyboard input and unit
+ conversion), the radix-cmd REPL, a headless `radix --solve` CLI and a
+ GNOME Shell search provider that answers straight from the search field.
+ .
+ The numeric core is MPFR/MPC at 2000-bit precision with an exact rational
+ shadow; unit and currency conversion ship with four exchange-rate
+ providers (ECB, IMF, UN Treasury, Bank of Canada).
+
+# m4 is required by gmp-mpfr-sys, which builds its bundled GMP/MPFR/MPC
+# from source at compile time (statically linked; no runtime gmp deps).

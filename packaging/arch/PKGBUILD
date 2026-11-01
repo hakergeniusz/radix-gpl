@@ -1,0 +1,65 @@
+# AUR-style PKGBUILD for Radix, following the Arch/Rust package
+# guidelines. The git tag, Cargo.toml, debian/changelog, the metainfo
+# releases and the Fedora spec must be bumped together; on a version
+# bump, update sha256sums (updpkgsums) along with pkgver/_tag.
+# m4/base-devel covers gmp-mpfr-sys, which builds its bundled
+# GMP/MPFR/MPC from source at compile time (statically linked).
+# Maintainer: hakergeniusz <hakergeniusz@users.noreply.github.com>
+
+pkgname=radix
+_tag=v51.1.0
+pkgver=51.1.0
+pkgrel=1
+pkgdesc="Desktop calculator with scientific, financial and programming modes (clean-room GNOME Calculator reimplementation)"
+arch=('x86_64')
+url="https://github.com/hakergeniusz/radix"
+license=('MIT')
+depends=('gtk4' 'libadwaita')
+makedepends=('cargo' 'm4')
+options=('!lto')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/$_tag.tar.gz")
+# SKIP until the v51.1.0 tag is pushed; run `updpkgsums` in packaging/arch
+# right after tagging to pin the archive checksum.
+sha256sums=('SKIP')
+
+prepare() {
+  cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+}
+
+build() {
+  cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR="target"
+  # --frozen = --locked --offline: deps are pinned and already fetched.
+  cargo build --frozen --release
+}
+
+check() {
+  cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR="target"
+  ./target/release/radix --version
+  ./target/release/radix-cmd "2+2" | grep -qx 4
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+  install -Dm755 target/release/radix -t "$pkgdir/usr/bin"
+  install -Dm755 target/release/radix-cmd -t "$pkgdir/usr/bin"
+  install -Dm755 target/release/radix-search-provider -t "$pkgdir/usr/bin"
+  install -Dm644 crates/radix-gui/data/applications/org.gnome.Radix.desktop \
+    "$pkgdir/usr/share/applications/org.gnome.Radix.desktop"
+  install -d "$pkgdir/usr/share/dbus-1/services"
+  sed 's|@bindir@|/usr/bin|' \
+    crates/radix-gui/data/dbus-1/services/org.gnome.Radix.SearchProvider.service \
+    > "$pkgdir/usr/share/dbus-1/services/org.gnome.Radix.SearchProvider.service"
+  install -Dm644 crates/radix-gui/data/metainfo/org.gnome.Radix.metainfo.xml \
+    "$pkgdir/usr/share/metainfo/org.gnome.Radix.metainfo.xml"
+  install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/org.gnome.Radix.svg \
+    "$pkgdir/usr/share/icons/hicolor/scalable/apps/org.gnome.Radix.svg"
+  install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg \
+    "$pkgdir/usr/share/icons/hicolor/symbolic/apps/org.gnome.Radix-symbolic.svg"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/radix/LICENSE"
+}
