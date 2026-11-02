@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-11-02 19:30+0000\n"
+"PO-Revision-Date: 2026-11-02 20:10+0000\n"
 "Last-Translator: ZCode (GLM-5.3-Flash)\n"
 "Language-Team: zh_CN\n""Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -18,6 +18,9 @@ msgstr "英亩"
 
 msgid "Advanced"
 msgstr "高级"
+
+msgid "Advanced mode"
+msgstr "高级模式"
 
 msgid "All currencies"
 msgstr "全部货币"
@@ -48,6 +51,12 @@ msgstr "巴"
 
 msgid "Basic"
 msgstr "基本"
+
+msgid "Basic mode"
+msgstr "基本模式"
+
+msgid "Binary"
+msgstr "二进制"
 
 msgid "Bit"
 msgstr "位"
@@ -97,8 +106,23 @@ msgstr "字符或代码"
 msgid "Clear History"
 msgstr "清空历史记录"
 
+msgid "Clear display"
+msgstr "清空显示屏"
+
+msgid "Clear history"
+msgstr "清空历史记录"
+
+msgid "Close window"
+msgstr "关闭窗口"
+
 msgid "Conversion"
 msgstr "转换"
+
+msgid "Copy"
+msgstr "复制"
+
+msgid "Cost"
+msgstr "成本"
 
 msgid "Cubic Meter"
 msgstr "立方米"
@@ -205,6 +229,9 @@ msgstr "英尺每秒"
 msgid "Financial"
 msgstr "财务"
 
+msgid "Financial mode"
+msgstr "财务模式"
+
 msgid "Fixed"
 msgstr "固定"
 
@@ -219,6 +246,9 @@ msgstr "频率"
 
 msgid "Functions"
 msgstr "函数"
+
+msgid "Future Value"
+msgstr "未来价值"
 
 msgid "General"
 msgstr "常规"
@@ -256,6 +286,9 @@ msgstr "帮助"
 msgid "Hertz"
 msgstr "赫兹"
 
+msgid "Hexadecimal"
+msgstr "十六进制"
+
 msgid "Hour"
 msgstr "小时"
 
@@ -282,6 +315,9 @@ msgstr "键盘"
 
 msgid "Keyboard Shortcuts"
 msgstr "键盘快捷键"
+
+msgid "Keyboard mode"
+msgstr "键盘模式"
 
 msgid "Kibibit"
 msgstr "千比比特"
@@ -328,6 +364,9 @@ msgstr "克罗内克尔δ"
 msgid "Length"
 msgstr "长度"
 
+msgid "Life"
+msgstr "年限"
+
 msgid "Lightyear"
 msgstr "光年"
 
@@ -336,6 +375,9 @@ msgstr "升"
 
 msgid "Main Menu"
 msgstr "主菜单"
+
+msgid "Margin"
+msgstr "利润率"
 
 msgid "Mass"
 msgstr "质量"
@@ -418,6 +460,9 @@ msgstr "从不"
 msgid "New Window"
 msgstr "新建窗口"
 
+msgid "New window"
+msgstr "新建窗口"
+
 msgid "Nibble"
 msgstr "半字节"
 
@@ -430,8 +475,14 @@ msgstr "无"
 msgid "Number Base"
 msgstr "进制"
 
+msgid "Number of Periods"
+msgstr "期数"
+
 msgid "Number of decimals"
 msgstr "小数位数"
+
+msgid "Octal"
+msgstr "八进制"
 
 msgid "Ounce"
 msgstr "盎司"
@@ -442,11 +493,23 @@ msgstr "秒差距"
 msgid "Pascal"
 msgstr "帕斯卡"
 
+msgid "Paste"
+msgstr "粘贴"
+
 msgid "Pebibit"
 msgstr "拍比比特"
 
 msgid "Pebibyte"
 msgstr "拍比字节"
+
+msgid "Period"
+msgstr "周期"
+
+msgid "Periodic Interest Rate"
+msgstr "定期利率"
+
+msgid "Periodic Payment"
+msgstr "定期付款"
 
 msgid "Petabit"
 msgstr "拍比特"
@@ -463,11 +526,20 @@ msgstr "磅"
 msgid "Preferences"
 msgstr "首选项"
 
+msgid "Present Value"
+msgstr "现值"
+
 msgid "Pressure"
 msgstr "压强"
 
+msgid "Principal"
+msgstr "本金"
+
 msgid "Programming"
 msgstr "编程"
+
+msgid "Programming mode"
+msgstr "编程模式"
 
 msgid "Quart"
 msgstr "夸脱"
@@ -481,8 +553,14 @@ msgstr "机架单位"
 msgid "Radians"
 msgstr "弧度"
 
+msgid "Redo"
+msgstr "重做"
+
 msgid "Result Format"
 msgstr "结果格式"
+
+msgid "Salvage Value"
+msgstr "残值"
 
 msgid "Scientific"
 msgstr "科学"
@@ -492,6 +570,9 @@ msgstr "秒"
 
 msgid "Show in conversion lists first"
 msgstr "在转换列表中置顶显示"
+
+msgid "Solve"
+msgstr "求解"
 
 msgid "Speed"
 msgstr "速度"
@@ -538,6 +619,9 @@ msgstr "太字节"
 msgid "Terahertz"
 msgstr "太赫兹"
 
+msgid "Term"
+msgstr "期限"
+
 msgid "Thousands separators"
 msgstr "千位分隔符"
 
@@ -555,6 +639,12 @@ msgstr "美制加仑"
 
 msgid "US Pint"
 msgstr "美制品脱"
+
+msgid "Undo"
+msgstr "撤销"
+
+msgid "Useful Life"
+msgstr "使用年限"
 
 msgid "Variable name"
 msgstr "变量名"

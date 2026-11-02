@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-11-02 19:30+0000\n"
+"PO-Revision-Date: 2026-11-02 20:10+0000\n"
 "Last-Translator: ZCode (GLM-5.3-Flash)\n"
 "Language-Team: ja\n""Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -18,6 +18,9 @@ msgstr "エーカー"
 
 msgid "Advanced"
 msgstr "詳細"
+
+msgid "Advanced mode"
+msgstr "詳細モード"
 
 msgid "All currencies"
 msgstr "すべての通貨"
@@ -48,6 +51,12 @@ msgstr "バール"
 
 msgid "Basic"
 msgstr "基本"
+
+msgid "Basic mode"
+msgstr "基本モード"
+
+msgid "Binary"
+msgstr "2 進数"
 
 msgid "Bit"
 msgstr "ビット"
@@ -97,8 +106,23 @@ msgstr "文字またはコード"
 msgid "Clear History"
 msgstr "履歴を消去"
 
+msgid "Clear display"
+msgstr "ディスプレイをクリア"
+
+msgid "Clear history"
+msgstr "履歴を消去"
+
+msgid "Close window"
+msgstr "ウィンドウを閉じる"
+
 msgid "Conversion"
 msgstr "変換"
+
+msgid "Copy"
+msgstr "コピー"
+
+msgid "Cost"
+msgstr "費用"
 
 msgid "Cubic Meter"
 msgstr "立方メートル"
@@ -205,6 +229,9 @@ msgstr "フィート毎秒"
 msgid "Financial"
 msgstr "財務"
 
+msgid "Financial mode"
+msgstr "財務モード"
+
 msgid "Fixed"
 msgstr "固定"
 
@@ -219,6 +246,9 @@ msgstr "周波数"
 
 msgid "Functions"
 msgstr "関数"
+
+msgid "Future Value"
+msgstr "将来価値"
 
 msgid "General"
 msgstr "全般"
@@ -256,6 +286,9 @@ msgstr "ヘルプ"
 msgid "Hertz"
 msgstr "ヘルツ"
 
+msgid "Hexadecimal"
+msgstr "16 進数"
+
 msgid "Hour"
 msgstr "時間"
 
@@ -282,6 +315,9 @@ msgstr "キーボード"
 
 msgid "Keyboard Shortcuts"
 msgstr "キーボードショートカット"
+
+msgid "Keyboard mode"
+msgstr "キーボードモード"
 
 msgid "Kibibit"
 msgstr "キビビット"
@@ -328,6 +364,9 @@ msgstr "クロネッカーのデルタ"
 msgid "Length"
 msgstr "長さ"
 
+msgid "Life"
+msgstr "償却期間"
+
 msgid "Lightyear"
 msgstr "光年"
 
@@ -336,6 +375,9 @@ msgstr "リットル"
 
 msgid "Main Menu"
 msgstr "メインメニュー"
+
+msgid "Margin"
+msgstr "マージン"
 
 msgid "Mass"
 msgstr "質量"
@@ -418,6 +460,9 @@ msgstr "しない"
 msgid "New Window"
 msgstr "新しいウィンドウ"
 
+msgid "New window"
+msgstr "新しいウィンドウ"
+
 msgid "Nibble"
 msgstr "ニブル"
 
@@ -430,8 +475,14 @@ msgstr "なし"
 msgid "Number Base"
 msgstr "基数"
 
+msgid "Number of Periods"
+msgstr "期間の数"
+
 msgid "Number of decimals"
 msgstr "小数桁数"
+
+msgid "Octal"
+msgstr "8 進数"
 
 msgid "Ounce"
 msgstr "オンス"
@@ -442,11 +493,23 @@ msgstr "パーセク"
 msgid "Pascal"
 msgstr "パスカル"
 
+msgid "Paste"
+msgstr "貼り付け"
+
 msgid "Pebibit"
 msgstr "ペビビット"
 
 msgid "Pebibyte"
 msgstr "ペビバイト"
+
+msgid "Period"
+msgstr "期間"
+
+msgid "Periodic Interest Rate"
+msgstr "定期利率"
+
+msgid "Periodic Payment"
+msgstr "定期支払額"
 
 msgid "Petabit"
 msgstr "ペタビット"
@@ -463,11 +526,20 @@ msgstr "ポンド"
 msgid "Preferences"
 msgstr "設定"
 
+msgid "Present Value"
+msgstr "現在価値"
+
 msgid "Pressure"
 msgstr "圧力"
 
+msgid "Principal"
+msgstr "元金"
+
 msgid "Programming"
 msgstr "プログラミング"
+
+msgid "Programming mode"
+msgstr "プログラミングモード"
 
 msgid "Quart"
 msgstr "クォート"
@@ -481,8 +553,14 @@ msgstr "ラックユニット"
 msgid "Radians"
 msgstr "ラジアン"
 
+msgid "Redo"
+msgstr "やり直す"
+
 msgid "Result Format"
 msgstr "結果の形式"
+
+msgid "Salvage Value"
+msgstr "残存価額"
 
 msgid "Scientific"
 msgstr "科学"
@@ -492,6 +570,9 @@ msgstr "秒"
 
 msgid "Show in conversion lists first"
 msgstr "変換リストの先頭に表示"
+
+msgid "Solve"
+msgstr "計算"
 
 msgid "Speed"
 msgstr "速度"
@@ -538,6 +619,9 @@ msgstr "テラバイト"
 msgid "Terahertz"
 msgstr "テラヘルツ"
 
+msgid "Term"
+msgstr "支払期間"
+
 msgid "Thousands separators"
 msgstr "桁区切り"
 
@@ -555,6 +639,12 @@ msgstr "米ガロン"
 
 msgid "US Pint"
 msgstr "米パイント"
+
+msgid "Undo"
+msgstr "元に戻す"
+
+msgid "Useful Life"
+msgstr "耐用年数"
 
 msgid "Variable name"
 msgstr "変数名"
