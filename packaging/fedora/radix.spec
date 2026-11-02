@@ -1,17 +1,17 @@
 # Spec for building Radix RPM packages. The version fields below track
-# the git tag (v51.1.1 -> Version 51.1.1); bump them together with
+# the git tag (v51.1.2 -> Version 51.1.2); bump them together with
 # Cargo.toml, debian/changelog, the metainfo releases and the Arch
 # PKGBUILD on each release.
 # m4 is required by gmp-mpfr-sys, which builds its bundled GMP/MPFR/MPC
 # from source at compile time (statically linked; no runtime gmp deps).
 Name:           radix
-Version:        51.1.1
+Version:        51.1.2
 Release:        1%{?dist}
 Summary:        Desktop calculator with scientific, financial and programming modes
 
 License:        GPL-3.0-or-later
 URL:            https://github.com/hakergeniusz/radix-gpl
-Source0:        %{url}/archive/refs/tags/v51.1.1/radix-51.1.1.tar.gz
+Source0:        %{url}/archive/refs/tags/v51.1.2/radix-51.1.2.tar.gz
 
 BuildRequires:  cargo
 BuildRequires:  gcc
@@ -33,7 +33,7 @@ GNOME Shell search provider that answers straight from the search field.}
 %description %{_description}
 
 %prep
-%autosetup -n radix-51.1.1
+%autosetup -n radix-51.1.2
 
 %build
 cargo build --release --locked
@@ -72,6 +72,10 @@ install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/io.github.haker
 %{_datadir}/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg
 
 %changelog
+* Sun Nov 02 2026 hakergeniusz <hakergeniusz@users.noreply.github.com> - 51.1.2-1
+- Advanced-mode square-root button (D30); close moves the app to the
+  background with an explicit Quit (D31); faster first paint via direct
+  GL renderer pick and lazy keypad pages (D32)
 * Sat Nov 01 2026 hakergeniusz <hakergeniusz@users.noreply.github.com> - 51.1.1-1
 - About page rebuilt on libadwaita's AboutWindow (D28): app icon, accent
   version chip, Website / Report an Issue / Credits / Legal rows and real
