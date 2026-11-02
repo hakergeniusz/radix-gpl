@@ -546,7 +546,9 @@ pub fn advanced(sink: &PadSink) -> ResponsivePads {
         1,
         1,
     );
-    attach(&ga, &fn_button("conj", ins("conj("), sink), 3, 0, 1, 1);
+    // Plain √ at the conj slot (D30): square root visible without the
+    // ⇧⁻¹ layer; conj stays available via the f(x) menu and typing.
+    attach(&ga, &fn_button("√", ins("√"), sink), 3, 0, 1, 1);
     attach(
         &ga,
         &inv(("x⁻¹", ins("⁻¹")), ("x¹", ins("¹")), "function-button"),
