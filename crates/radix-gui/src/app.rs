@@ -6,21 +6,40 @@ use gtk::gio;
 use gtk::prelude::*;
 use radix_core::settings::ButtonMode;
 use std::cell::RefCell;
+use std::rc::{Rc, Weak};
 
 thread_local! {
-    static WINDOW_COUNT: RefCell<u32> = const { RefCell::new(0) };
+    /// Every live window, hidden ones included — closing a window moves it
+    /// to the background (D31), so Quit iterates this registry rather than
+    /// the application window list. Weak refs; dead entries are skipped.
+    static WINDOWS: RefCell<Vec<Weak<CalcWindow>>> = const { RefCell::new(Vec::new()) };
 }
 
-/// A window went away — keeps the Ctrl+Q "Close All?" check honest when
-/// windows are opened and closed through the menu (doc 06 §3).
-pub(crate) fn window_closed() {
-    WINDOW_COUNT.with(|c| {
-        let n = c.borrow().saturating_sub(1);
-        *c.borrow_mut() = n;
-    });
+/// Track a window so Ctrl+Q / menu Quit can persist every window's state
+/// before exit (D31).
+pub(crate) fn register_window(win: &Rc<CalcWindow>) {
+    WINDOWS.with(|c| c.borrow_mut().push(Rc::downgrade(win)));
+}
+
+/// Save every live window's state, then exit (Ctrl+Q / menu Quit, D31).
+fn quit_saving() {
+    let windows: Vec<Rc<CalcWindow>> = WINDOWS
+        .with(|c| c.borrow().iter().filter_map(|w| w.upgrade()).collect());
+    for win in &windows {
+        win.save_shutdown_state();
+    }
+    std::process::exit(0);
 }
 
 pub fn run(equation: Option<String>, mode: Option<ButtonMode>) -> std::process::ExitCode {
+    // First-map renderer (D32): the autodetect path probes Vulkan before
+    // falling back to GL, which costs ~120 ms at the first frame on the
+    // startup harness (286 ms → 170 ms). ngl is the modern GNOME default
+    // anyway; an explicit GSK_RENDERER from the environment still wins.
+    if std::env::var_os("GSK_RENDERER").is_none() {
+        std::env::set_var("GSK_RENDERER", "ngl");
+    }
+
     // adw::Application initializes libadwaita and loads its stylesheet —
     // with plain gtk::Application the Adw widgets render unstyled (stock
     // GTK Adwaita, always light) regardless of the color scheme.
@@ -39,8 +58,8 @@ pub fn run(equation: Option<String>, mode: Option<ButtonMode>) -> std::process::
         if let Some(display) = gtk::gdk::Display::default() {
             gtk::Settings::for_display(&display).set_gtk_decoration_layout(Some(":close"));
         }
-        let _win = CalcWindow::new(app.upcast_ref(), equation.clone(), mode);
-        WINDOW_COUNT.with(|c| *c.borrow_mut() += 1);
+        let win = CalcWindow::new(app.upcast_ref(), equation.clone(), mode);
+        register_window(&win);
     });
 
     // main.rs already parsed the command line itself; hand GTK an empty list
@@ -56,7 +75,7 @@ fn install_app_actions(app: &adw::Application) {
         new_window.connect_activate(move |_, _| {
             let win = CalcWindow::new(app.upcast_ref(), None, None);
             win.window.present();
-            WINDOW_COUNT.with(|c| *c.borrow_mut() += 1);
+            register_window(&win);
         });
     }
     app.add_action(&new_window);
@@ -117,14 +136,12 @@ fn install_accels(app: &adw::Application) {
     app.set_accels_for_action("win.close-all", &["<Ctrl>q"]);
 }
 
-/// Ctrl+Q confirmation dialog lives on each window (win.close-all).
+/// Ctrl+Q / menu Quit: persist every window's state and exit (D31). The
+/// doc 06 §3 "Close All?" confirmation was never wired (the action used
+/// to no-op for multiple windows); with close-as-background there is
+/// nothing to confirm — Quit simply ends the app.
 pub fn bind_close_all(win: &adw::ApplicationWindow) {
     let action = gio::SimpleAction::new("close-all", None);
-    action.connect_activate(move |_, _| {
-        let many = WINDOW_COUNT.with(|c| *c.borrow() > 1);
-        if !many {
-            std::process::exit(0);
-        }
-    });
+    action.connect_activate(|_, _| quit_saving());
     win.add_action(&action);
 }
