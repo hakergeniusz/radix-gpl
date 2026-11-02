@@ -1,3 +1,13 @@
+radix (51.1.2-1) unstable; urgency=medium
+
+  * Advanced mode: a plain square-root button in row 0 (D30).
+  * Closing the window moves the app to the background; Quit lives in the
+    primary menu and Ctrl+Q saves every window's state (D31).
+  * Faster first paint: the GL renderer is selected directly and keypad
+    pages build on demand (D32).
+
+ -- hakergeniusz <hakergeniusz@users.noreply.github.com>  Sun, 02 Nov 2026 12:00:00 +0000
+
 radix (51.1.1-1) unstable; urgency=medium
 
   * About page rebuilt on libadwaita's AboutWindow (D28): app icon, accent

@@ -38,6 +38,14 @@
   </provides>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="51.1.2" date="2026-11-02">
+      <description>
+        <p>Advanced mode gains a plain square-root button; closing the window
+        now moves the calculator to the background, with Quit in the primary
+        menu; startup picks the GL renderer directly and builds keypad pages
+        on demand, cutting the time to first paint.</p>
+      </description>
+    </release>
     <release version="51.1.1" date="2026-11-01">
       <description>
         <p>The About page was rebuilt on libadwaita's AboutWindow: app icon,
