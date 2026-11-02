@@ -3,7 +3,7 @@ resolver = "2"
 members = ["crates/radix-core", "crates/radix-cli", "crates/radix-gui"]
 
 [workspace.package]
-version = "51.1.2"
+version = "51.1.3"
 edition = "2021"
 license = "GPL-3.0-or-later"
 authors = ["Radix Team B"]

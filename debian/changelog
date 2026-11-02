@@ -1,3 +1,11 @@
+radix (51.1.3-1) unstable; urgency=medium
+
+  * Translations: the interface ships in German, Polish, Spanish, French,
+    Italian, Brazilian Portuguese, Japanese and Simplified Chinese (D33),
+    following the system language or $LANGUAGE.
+
+ -- hakergeniusz <hakergeniusz@users.noreply.github.com>  Sun, 02 Nov 2026 20:45:00 +0000
+
 radix (51.1.2-1) unstable; urgency=medium
 
   * Advanced mode: a plain square-root button in row 0 (D30).
