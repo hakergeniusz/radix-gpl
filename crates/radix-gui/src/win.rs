@@ -75,6 +75,8 @@ pub struct CalcWindow {
     financial_pads: RefCell<Option<keypad::ResponsivePads>>,
     /// Conversion keypad handle (hex buttons enable per base).
     pub conv_pad: RefCell<Option<keypad::ConversionPad>>,
+    /// Modes whose keypad page has been built (D32 lazy keypads).
+    built_pads: RefCell<Vec<ButtonMode>>,
     /// Converter panel (conversion mode only).
     pub converter: RefCell<Option<Rc<ConverterPanel>>>,
     /// Alt+Left/Right history navigation position.
@@ -446,6 +448,7 @@ impl CalcWindow {
             advanced_pads: RefCell::new(None),
             financial_pads: RefCell::new(None),
             conv_pad: RefCell::new(None),
+            built_pads: RefCell::new(Vec::new()),
             converter: RefCell::new(None),
             history_nav: RefCell::new(None),
             collapsed: std::cell::Cell::new(false),
@@ -457,67 +460,14 @@ impl CalcWindow {
         // them and app.rs registers their accelerators (D25).
         win.install_window_actions();
 
-        // Keypads (built with a sink that dispatches into the window).
-        let w = Rc::clone(&win);
-        let sink: PadSink = Rc::new(move |a| w.dispatch_pad(a));
-        let basic = keypad::basic(&sink);
-        let advanced = keypad::advanced(&sink);
-        let financial = keypad::financial(&sink);
-        keypad::set_inverse_active(false);
-        let prog = keypad::programming(&sink);
-        let conv = keypad::conversion(&sink);
-        // No page scrolls (upstream parity): every page is a direct child
-        // of the stack so its minimum height reaches the window. A
-        // ScrolledWindow here swallowed the conversion keypad's 236 px
-        // minimum — the window never grew to fit and the last rows clipped
-        // (the reference conversion window is ~638 px tall). The wide modes
-        // collapse into a carousel below 700 px (doc 13 §6.1) instead.
-        basic.set_margin_top(12);
-        win.keypad_stack.add_named(&basic, Some("basic"));
-        advanced.root.set_margin_top(12);
-        win.keypad_stack.add_named(&advanced.root, Some("advanced"));
-        financial.root.set_margin_top(12);
-        win.keypad_stack
-            .add_named(&financial.root, Some("financial"));
-        prog.root.set_margin_top(12);
-        win.keypad_stack.add_named(&prog.root, Some("programming"));
-        conv.grid.set_margin_top(12);
-        win.keypad_stack.add_named(&conv.grid, Some("conversion"));
+        // Keypad pages are built on first use (D32): apply_mode builds the
+        // start mode synchronously below; the remaining pages are built on
+        // the first idle, after the window has mapped. Keyboard mode has no
+        // keypad (doc 06 §5.6) — an empty page.
         win.keypad_stack.add_named(
             &gtk::Box::new(gtk::Orientation::Vertical, 0),
             Some("keyboard"),
         );
-        let prog_bit_panel = prog.bit_panel.clone();
-        *win.prog.borrow_mut() = Some(prog);
-        // The bit panel lives inside the display card (doc 13 §6.4) so its
-        // margins/radius follow the card's clamp mode (D24); visibility is
-        // driven by apply_mode.
-        card.append(&prog_bit_panel);
-        prog_bit_panel.set_visible(false);
-        *win.advanced_pads.borrow_mut() = Some(advanced);
-        *win.financial_pads.borrow_mut() = Some(financial);
-        *win.conv_pad.borrow_mut() = Some(conv);
-        // x / f(x) menu buttons: attach persistent popovers whose content
-        // refreshes on every open (doc 13 §5.2/§8.1).
-        keypad::for_each_math_button(|btn, kind| {
-            let pop = gtk::Popover::new();
-            pop.add_css_class("math-popover");
-            pop.set_position(gtk::PositionType::Top);
-            let content = gtk::Box::new(gtk::Orientation::Vertical, 6);
-            content.set_size_request(320, 340);
-            content.set_margin_top(6);
-            content.set_margin_bottom(6);
-            content.set_margin_start(6);
-            content.set_margin_end(6);
-            pop.set_child(Some(&content));
-            btn.set_popover(Some(&pop));
-            let w = Rc::downgrade(&win);
-            let pop2 = pop.clone();
-            pop.connect_map(move |_| {
-                let Some(w) = w.upgrade() else { return };
-                crate::popovers::fill_math_popover(&content, &pop2, &w, kind);
-            });
-        });
 
         // Converter panel: a window-level card between the display card and
         // the keypad, visible only in conversion mode (doc 06 §6, doc 13 §7).
@@ -614,16 +564,18 @@ impl CalcWindow {
             }
         }
 
-        // Ctrl+Q "Close All?" confirmation lives on each window (doc 06 §3).
+        // Ctrl+Q / menu Quit save-and-exit lives on each window (D31).
         crate::app::bind_close_all(&win.window);
         win.window.connect_close_request({
             let w = Rc::downgrade(&win);
             move |_| {
+                // Close = move to background (D31): persist state and hide;
+                // the process stays resident. Ctrl+Q or menu Quit exits.
                 if let Some(w) = w.upgrade() {
                     w.save_shutdown_state();
+                    w.window.set_visible(false);
                 }
-                crate::app::window_closed();
-                glib::Propagation::Proceed
+                glib::Propagation::Stop
             }
         });
 
@@ -634,6 +586,25 @@ impl CalcWindow {
         // silently dropped, initial focus then lands on the first focusable
         // header widget and Return would activate the menu button (D25).
         tv.grab_focus();
+
+        // Build the remaining keypad pages off the critical path (D32):
+        // the first idle, after the window has mapped with the start
+        // mode's page visible.
+        {
+            let w2 = Rc::downgrade(&win);
+            glib::idle_add_local_once(move || {
+                let Some(w) = w2.upgrade() else { return };
+                for m in [
+                    ButtonMode::Basic,
+                    ButtonMode::Advanced,
+                    ButtonMode::Financial,
+                    ButtonMode::Programming,
+                    ButtonMode::Conversion,
+                ] {
+                    w.ensure_pads(m);
+                }
+            });
+        }
 
         win
     }
@@ -792,9 +763,112 @@ impl CalcWindow {
         });
     }
 
+    /// Build a mode's keypad page on first use (D32). apply_mode always
+    /// calls this before set_visible_child_name; the start mode is built
+    /// synchronously at startup, the remaining pages from the first idle.
+    fn ensure_pads(self: &Rc<Self>, mode: ButtonMode) {
+        if mode == ButtonMode::Keyboard || self.built_pads.borrow().contains(&mode) {
+            return;
+        }
+        let w = Rc::clone(self);
+        let sink: PadSink = Rc::new(move |a| w.dispatch_pad(a));
+        match mode {
+            ButtonMode::Basic => {
+                let grid = keypad::basic(&sink);
+                // No page scrolls (upstream parity): every page is a direct
+                // child of the stack so its minimum height reaches the
+                // window — a ScrolledWindow here swallowed the conversion
+                // keypad's 236 px minimum and clipped its last rows.
+                grid.set_margin_top(12);
+                self.swap_pad_page("basic", &grid);
+            }
+            ButtonMode::Advanced => {
+                let pads = keypad::advanced(&sink);
+                pads.root.set_margin_top(12);
+                let root = pads.root.clone();
+                *self.advanced_pads.borrow_mut() = Some(pads);
+                self.swap_pad_page("advanced", &root);
+            }
+            ButtonMode::Financial => {
+                let pads = keypad::financial(&sink);
+                pads.root.set_margin_top(12);
+                let root = pads.root.clone();
+                *self.financial_pads.borrow_mut() = Some(pads);
+                self.swap_pad_page("financial", &root);
+            }
+            ButtonMode::Programming => {
+                let pads = keypad::programming(&sink);
+                pads.root.set_margin_top(12);
+                // The bit panel lives inside the display card (doc 13 §6.4)
+                // so its margins/radius follow the card's clamp mode (D24);
+                // visibility is driven by apply_mode.
+                self.card.append(&pads.bit_panel);
+                pads.bit_panel.set_visible(false);
+                let root = pads.root.clone();
+                *self.prog.borrow_mut() = Some(pads);
+                self.swap_pad_page("programming", &root);
+            }
+            ButtonMode::Conversion => {
+                let pads = keypad::conversion(&sink);
+                pads.grid.set_margin_top(12);
+                let grid = pads.grid.clone();
+                *self.conv_pad.borrow_mut() = Some(pads);
+                self.swap_pad_page("conversion", &grid);
+            }
+            ButtonMode::Keyboard => {}
+        }
+        // Freshly built buttons must reflect the live modifier state.
+        keypad::set_inverse_active(*self.inverse.borrow());
+        let insert = self.display.borrow().insert_mode();
+        keypad::set_mode_toggles(
+            insert == InsertMode::Superscript,
+            insert == InsertMode::Subscript,
+        );
+        self.attach_math_popovers();
+        self.built_pads.borrow_mut().push(mode);
+    }
+
+    /// Replace a mode's stack page with its real keypad (D32).
+    fn swap_pad_page<W: glib::object::IsA<gtk::Widget>>(&self, name: &'static str, widget: &W) {
+        if let Some(old) = self.keypad_stack.child_by_name(name) {
+            self.keypad_stack.remove(&old);
+        }
+        self.keypad_stack.add_named(widget, Some(name));
+    }
+
+    /// x / f(x) menu buttons: attach persistent popovers whose content
+    /// refreshes on every open (doc 13 §5.2/§8.1). Runs after every keypad
+    /// build; already-wired buttons are skipped.
+    fn attach_math_popovers(self: &Rc<Self>) {
+        keypad::for_each_math_button(|btn, kind| {
+            if btn.popover().is_some() {
+                return;
+            }
+            let pop = gtk::Popover::new();
+            pop.add_css_class("math-popover");
+            pop.set_position(gtk::PositionType::Top);
+            let content = gtk::Box::new(gtk::Orientation::Vertical, 6);
+            content.set_size_request(320, 340);
+            content.set_margin_top(6);
+            content.set_margin_bottom(6);
+            content.set_margin_start(6);
+            content.set_margin_end(6);
+            pop.set_child(Some(&content));
+            btn.set_popover(Some(&pop));
+            let w = Rc::downgrade(self);
+            let pop2 = pop.clone();
+            pop.connect_map(move |_| {
+                let Some(w) = w.upgrade() else { return };
+                crate::popovers::fill_math_popover(&content, &pop2, &w, kind);
+            });
+        });
+    }
+
     pub fn apply_mode(self: &Rc<Self>, mode: ButtonMode) {
         let prev = *self.mode.borrow();
         *self.mode.borrow_mut() = mode;
+        // The page must exist before set_visible_child_name (D32).
+        self.ensure_pads(mode);
         let name = MODE_NAMES
             .iter()
             .find(|(m, _)| *m == mode)
@@ -1591,7 +1665,7 @@ impl CalcWindow {
         Some(if neg { -v } else { v })
     }
 
-    fn save_shutdown_state(&self) {
+    pub(crate) fn save_shutdown_state(&self) {
         let mut settings = self.settings.borrow_mut();
         // History tape written per window close; mode/base/converter/window
         // size at shutdown of the last window (doc 06 §14, doc 08 §1/§3).
@@ -2095,6 +2169,12 @@ fn primary_menu_model() -> gio::Menu {
     s.append(Some("Keyboard Shortcuts"), Some("app.shortcuts"));
     s.append(Some("Help"), Some("app.help"));
     s.append(Some("About Calculator"), Some("app.about"));
+    menu.append_section(None, &s);
+
+    // Closing the window moves the app to the background (D31), so the
+    // menu carries the real exit.
+    let s = gio::Menu::new();
+    s.append(Some("Quit"), Some("win.close-all"));
     menu.append_section(None, &s);
     menu
 }
