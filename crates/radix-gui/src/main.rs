@@ -9,6 +9,7 @@ mod cli;
 mod converter;
 mod dialogs;
 mod display;
+mod i18n;
 mod keypad;
 mod popovers;
 mod prefs;
@@ -89,5 +90,7 @@ fn main() -> std::process::ExitCode {
         return cli::run_solve(&equation);
     }
 
+    // Bind the translation catalog before GTK reads the locale (D33).
+    i18n::init();
     app::run(equation, mode)
 }

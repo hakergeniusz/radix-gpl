@@ -895,18 +895,18 @@ pub fn programming(sink: &PadSink) -> ProgrammingPads {
         ("Decimal", 10),
         ("Hexadecimal", 16),
     ] {
-        let it = gio::MenuItem::new(Some(name), None);
+        let it = gio::MenuItem::new(Some(&crate::i18n::gettext(name)), None);
         it.set_action_and_target_value(Some("win.prog-base"), Some(&base.to_string().to_variant()));
         base_menu.append_item(&it);
     }
     let base_btn = gtk::MenuButton::new();
-    base_btn.set_label("Decimal");
+    base_btn.set_label(&crate::i18n::gettext("Decimal"));
     base_btn.set_menu_model(Some(&base_menu));
     base_btn.set_direction(gtk::ArrowType::Up);
     base_btn.set_can_shrink(true);
     base_btn.set_focusable(false);
     base_btn.add_css_class("function-button");
-    base_btn.set_tooltip_text(Some("Change Base"));
+    base_btn.set_tooltip_text(Some(&crate::i18n::gettext("Change Base")));
 
     let word_menu = gio::Menu::new();
     for word in [8u32, 16, 32, 64] {
@@ -921,7 +921,7 @@ pub fn programming(sink: &PadSink) -> ProgrammingPads {
     word_btn.set_can_shrink(true);
     word_btn.set_focusable(false);
     word_btn.add_css_class("function-button");
-    word_btn.set_tooltip_text(Some("Change Word Size"));
+    word_btn.set_tooltip_text(Some(&crate::i18n::gettext("Change Word Size")));
 
     // Two 5-column grids (doc 13 §6.1): upstream 51.0 layout — advanced
     // functions left, basic digits right, hex digits in a nested five-

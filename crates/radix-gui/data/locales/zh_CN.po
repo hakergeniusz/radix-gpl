@@ -1,0 +1,746 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: radix 51.1.2\n"
+"Report-Msgid-Bugs-To: https://github.com/hakergeniusz/radix/issues\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-11-02 19:30+0000\n"
+"Last-Translator: ZCode (GLM-5.3-Flash)\n"
+"Language-Team: zh_CN\n""Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "About Calculator"
+msgstr "关于计算器"
+
+msgid "Acre"
+msgstr "英亩"
+
+msgid "Advanced"
+msgstr "高级"
+
+msgid "All currencies"
+msgstr "全部货币"
+
+msgid "Angle"
+msgstr "角度"
+
+msgid "Angle units"
+msgstr "角度单位"
+
+msgid "Area"
+msgstr "面积"
+
+msgid "Astronomical Unit"
+msgstr "天文单位"
+
+msgid "Atmosphere"
+msgstr "标准大气压"
+
+msgid "Automatic"
+msgstr "自动"
+
+msgid "BTU"
+msgstr "英热单位"
+
+msgid "Bar"
+msgstr "巴"
+
+msgid "Basic"
+msgstr "基本"
+
+msgid "Bit"
+msgstr "位"
+
+msgid "Bit editing needs an integer value"
+msgstr "位编辑需要整数值"
+
+msgid "Both"
+msgstr "两者"
+
+msgid "Byte"
+msgstr "字节"
+
+msgid "Cable"
+msgstr "链"
+
+msgid "Calculate"
+msgstr "计算"
+
+msgid "Calculation"
+msgstr "计算"
+
+msgid "Calorie"
+msgstr "卡路里"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Centimeter"
+msgstr "厘米"
+
+msgid "Century"
+msgstr "世纪"
+
+msgid "Change Base"
+msgstr "更改进制"
+
+msgid "Change Word Size"
+msgstr "更改字长"
+
+msgid "Character"
+msgstr "字符"
+
+msgid "Character or code"
+msgstr "字符或代码"
+
+msgid "Clear History"
+msgstr "清空历史记录"
+
+msgid "Conversion"
+msgstr "转换"
+
+msgid "Cubic Meter"
+msgstr "立方米"
+
+msgid "Cup"
+msgstr "杯"
+
+msgid "Currency"
+msgstr "货币"
+
+msgid "Currency Code"
+msgstr "货币代码"
+
+msgid "Currency Name"
+msgstr "货币名称"
+
+msgid "Currency completion"
+msgstr "货币补全"
+
+msgid "Currency display"
+msgstr "货币显示"
+
+msgid "Currency refresh interval"
+msgstr "汇率刷新间隔"
+
+msgid "Daily"
+msgstr "每天"
+
+msgid "Day"
+msgstr "天"
+
+msgid "Decade"
+msgstr "十年"
+
+msgid "Decimal"
+msgstr "十进制"
+
+msgid "Degree Celsius"
+msgstr "摄氏度"
+
+msgid "Degree Fahrenheit"
+msgstr "华氏度"
+
+msgid "Degree Kelvin"
+msgstr "开氏度"
+
+msgid "Degree Rankine"
+msgstr "兰氏度"
+
+msgid "Degrees"
+msgstr "度"
+
+msgid "Degrees (Decimal)"
+msgstr "度（十进制）"
+
+msgid "Degrees (D°M′S″)"
+msgstr "度（D°M′S″）"
+
+msgid "Digital Storage"
+msgstr "数字存储"
+
+msgid "Duration"
+msgstr "时长"
+
+msgid "Electronvolt"
+msgstr "电子伏特"
+
+msgid "Energy"
+msgstr "能量"
+
+msgid "Engineering"
+msgstr "工程"
+
+msgid "Erg"
+msgstr "尔格"
+
+msgid "Exabit"
+msgstr "艾比特"
+
+msgid "Exabyte"
+msgstr "艾字节"
+
+msgid "Exbibit"
+msgstr "艾比比特"
+
+msgid "Exbibyte"
+msgstr "艾比字节"
+
+msgid "Exchange Rate Data Providers"
+msgstr "汇率数据提供方"
+
+msgid "Fathom"
+msgstr "英寻"
+
+msgid "Favorite Currencies"
+msgstr "收藏的货币"
+
+msgid "Favorites only"
+msgstr "仅收藏"
+
+msgid "Feet per second"
+msgstr "英尺每秒"
+
+msgid "Financial"
+msgstr "财务"
+
+msgid "Fixed"
+msgstr "固定"
+
+msgid "Foot"
+msgstr "英尺"
+
+msgid "Foot-pound"
+msgstr "英尺磅"
+
+msgid "Frequency"
+msgstr "频率"
+
+msgid "Functions"
+msgstr "函数"
+
+msgid "General"
+msgstr "常规"
+
+msgid "Gibibit"
+msgstr "吉比比特"
+
+msgid "Gibibyte"
+msgstr "吉比字节"
+
+msgid "Gigabit"
+msgstr "吉比特"
+
+msgid "Gigabyte"
+msgstr "吉字节"
+
+msgid "Gigahertz"
+msgstr "吉赫兹"
+
+msgid "Gradians"
+msgstr "梯度"
+
+msgid "Gram"
+msgstr "克"
+
+msgid "Hectare"
+msgstr "公顷"
+
+msgid "Hectopascal"
+msgstr "百帕"
+
+msgid "Help"
+msgstr "帮助"
+
+msgid "Hertz"
+msgstr "赫兹"
+
+msgid "Hour"
+msgstr "小时"
+
+msgid "Imperial Gallon"
+msgstr "英制加仑"
+
+msgid "Imperial Pint"
+msgstr "英制品脱"
+
+msgid "Inch"
+msgstr "英寸"
+
+msgid "Insert"
+msgstr "插入"
+
+msgid "Invalid variable name"
+msgstr "无效的变量名"
+
+msgid "Joule"
+msgstr "焦耳"
+
+msgid "Keyboard"
+msgstr "键盘"
+
+msgid "Keyboard Shortcuts"
+msgstr "键盘快捷键"
+
+msgid "Kibibit"
+msgstr "千比比特"
+
+msgid "Kibibyte"
+msgstr "千比字节"
+
+msgid "Kilobit"
+msgstr "千比特"
+
+msgid "Kilobyte"
+msgstr "千字节"
+
+msgid "Kilocalorie"
+msgstr "千卡路里"
+
+msgid "Kilograms"
+msgstr "千克"
+
+msgid "Kilohertz"
+msgstr "千赫兹"
+
+msgid "Kilojoule"
+msgstr "千焦耳"
+
+msgid "Kilometer"
+msgstr "千米"
+
+msgid "Kilometers per hour"
+msgstr "千米每小时"
+
+msgid "Kilopascal"
+msgstr "千帕"
+
+msgid "Kilowatt hour"
+msgstr "千瓦时"
+
+msgid "Knot"
+msgstr "节"
+
+msgid "Kronecker delta"
+msgstr "克罗内克尔δ"
+
+msgid "Length"
+msgstr "长度"
+
+msgid "Lightyear"
+msgstr "光年"
+
+msgid "Litre"
+msgstr "升"
+
+msgid "Main Menu"
+msgstr "主菜单"
+
+msgid "Mass"
+msgstr "质量"
+
+msgid "Mebibit"
+msgstr "兆比比特"
+
+msgid "Mebibyte"
+msgstr "兆比字节"
+
+msgid "Megabit"
+msgstr "兆比特"
+
+msgid "Megabyte"
+msgstr "兆字节"
+
+msgid "Megahertz"
+msgstr "兆赫兹"
+
+msgid "Megajoule"
+msgstr "兆焦耳"
+
+msgid "Meter"
+msgstr "米"
+
+msgid "Meters per second"
+msgstr "米每秒"
+
+msgid "Microgram"
+msgstr "微克"
+
+msgid "Microlitre"
+msgstr "微升"
+
+msgid "Micrometer"
+msgstr "微米"
+
+msgid "Microsecond"
+msgstr "微秒"
+
+msgid "Mile"
+msgstr "英里"
+
+msgid "Miles per hour"
+msgstr "英里每小时"
+
+msgid "Milligram"
+msgstr "毫克"
+
+msgid "Millilitre"
+msgstr "毫升"
+
+msgid "Millimeter"
+msgstr "毫米"
+
+msgid "Millisecond"
+msgstr "毫秒"
+
+msgid "Minute"
+msgstr "分"
+
+msgid "Mode Selection"
+msgstr "模式选择"
+
+msgid "Month"
+msgstr "月"
+
+msgid "Nanometer"
+msgstr "纳米"
+
+msgid "Nanosecond"
+msgstr "纳秒"
+
+msgid "Nautical Mile"
+msgstr "海里"
+
+msgid "Never"
+msgstr "从不"
+
+msgid "New Window"
+msgstr "新建窗口"
+
+msgid "Nibble"
+msgstr "半字节"
+
+msgid "No value to store"
+msgstr "没有可保存的值"
+
+msgid "None"
+msgstr "无"
+
+msgid "Number Base"
+msgstr "进制"
+
+msgid "Number of decimals"
+msgstr "小数位数"
+
+msgid "Ounce"
+msgstr "盎司"
+
+msgid "Parsec"
+msgstr "秒差距"
+
+msgid "Pascal"
+msgstr "帕斯卡"
+
+msgid "Pebibit"
+msgstr "拍比比特"
+
+msgid "Pebibyte"
+msgstr "拍比字节"
+
+msgid "Petabit"
+msgstr "拍比特"
+
+msgid "Petabyte"
+msgstr "拍字节"
+
+msgid "Point"
+msgstr "磅"
+
+msgid "Pound"
+msgstr "磅"
+
+msgid "Preferences"
+msgstr "首选项"
+
+msgid "Pressure"
+msgstr "压强"
+
+msgid "Programming"
+msgstr "编程"
+
+msgid "Quart"
+msgstr "夸脱"
+
+msgid "Quit"
+msgstr "退出"
+
+msgid "Rack Unit"
+msgstr "机架单位"
+
+msgid "Radians"
+msgstr "弧度"
+
+msgid "Result Format"
+msgstr "结果格式"
+
+msgid "Scientific"
+msgstr "科学"
+
+msgid "Second"
+msgstr "秒"
+
+msgid "Show in conversion lists first"
+msgstr "在转换列表中置顶显示"
+
+msgid "Speed"
+msgstr "速度"
+
+msgid "Square Centimeter"
+msgstr "平方厘米"
+
+msgid "Square Foot"
+msgstr "平方英尺"
+
+msgid "Square Kilometer"
+msgstr "平方千米"
+
+msgid "Square Meter"
+msgstr "平方米"
+
+msgid "Square Mile"
+msgstr "平方英里"
+
+msgid "Square Millimeter"
+msgstr "平方毫米"
+
+msgid "Stone"
+msgstr "英石"
+
+msgid "Store value"
+msgstr "保存数值"
+
+msgid "Tebibit"
+msgstr "太比比特"
+
+msgid "Tebibyte"
+msgstr "太比字节"
+
+msgid "Temperature"
+msgstr "温度"
+
+msgid "Terabit"
+msgstr "太比特"
+
+msgid "Terabyte"
+msgstr "太字节"
+
+msgid "Terahertz"
+msgstr "太赫兹"
+
+msgid "Thousands separators"
+msgstr "千位分隔符"
+
+msgid "Tonne"
+msgstr "公吨"
+
+msgid "Trailing zeroes"
+msgstr "末尾补零"
+
+msgid "Troy Ounce"
+msgstr "金衡盎司"
+
+msgid "US Gallon"
+msgstr "美制加仑"
+
+msgid "US Pint"
+msgstr "美制品脱"
+
+msgid "Variable name"
+msgstr "变量名"
+
+msgid "Variables"
+msgstr "变量"
+
+msgid "Volume"
+msgstr "体积"
+
+msgid "Week"
+msgstr "周"
+
+msgid "Weekly"
+msgstr "每周"
+
+msgid "Word size"
+msgstr "字长"
+
+msgid "Yard"
+msgstr "码"
+
+msgid "Year"
+msgstr "年"
+
+msgid "Yobibit"
+msgstr "尧比比特"
+
+msgid "Yobibyte"
+msgstr "尧比字节"
+
+msgid "Yottabit"
+msgstr "尧比特"
+
+msgid "Yottabyte"
+msgstr "尧字节"
+
+msgid "Zebibit"
+msgstr "泽比比特"
+
+msgid "Zebibyte"
+msgstr "泽比字节"
+
+msgid "Zettabit"
+msgstr "泽比特"
+
+msgid "Zettabyte"
+msgstr "泽字节"
+
+msgid "absolute value"
+msgstr "绝对值"
+
+msgid "average"
+msgstr "平均值"
+
+msgid "ceiling"
+msgstr "向上取整"
+
+msgid "combinations"
+msgstr "组合数"
+
+msgid "complex argument"
+msgstr "辐角"
+
+msgid "conjugate"
+msgstr "共轭"
+
+msgid "cos x"
+msgstr "cos x"
+
+msgid "cosh x"
+msgstr "cosh x"
+
+msgid "cosh⁻¹ x"
+msgstr "cosh⁻¹ x"
+
+msgid "cos⁻¹ x"
+msgstr "cos⁻¹ x"
+
+msgid "floor"
+msgstr "向下取整"
+
+msgid "fractional component"
+msgstr "小数部分"
+
+msgid "greatest common divisor"
+msgstr "最大公约数"
+
+msgid "imaginary component"
+msgstr "虚部"
+
+msgid "inHg"
+msgstr "英寸汞柱"
+
+msgid "integer component"
+msgstr "整数部分"
+
+msgid "least common multiple"
+msgstr "最小公倍数"
+
+msgid "logarithm"
+msgstr "对数"
+
+msgid "maximum value"
+msgstr "最大值"
+
+msgid "median"
+msgstr "中位数"
+
+msgid "minimum value"
+msgstr "最小值"
+
+msgid "mmHg"
+msgstr "毫米汞柱"
+
+msgid "modular exponentiation"
+msgstr "模幂运算"
+
+msgid "modulus divide"
+msgstr "取模除法"
+
+msgid "natural logarithm"
+msgstr "自然对数"
+
+msgid "permutations"
+msgstr "排列数"
+
+msgid "population standard deviation"
+msgstr "总体标准差"
+
+msgid "population variance"
+msgstr "总体方差"
+
+msgid "psi"
+msgstr "磅力每平方英寸"
+
+msgid "real component"
+msgstr "实部"
+
+msgid "round"
+msgstr "四舍五入"
+
+msgid "sample standard deviation"
+msgstr "样本标准差"
+
+msgid "sample variance"
+msgstr "样本方差"
+
+msgid "signum"
+msgstr "符号函数"
+
+msgid "sin x"
+msgstr "sin x"
+
+msgid "sinh x"
+msgstr "sinh x"
+
+msgid "sinh⁻¹ x"
+msgstr "sinh⁻¹ x"
+
+msgid "sin⁻¹ x"
+msgstr "sin⁻¹ x"
+
+msgid "square root"
+msgstr "平方根"
+
+msgid "sum"
+msgstr "总和"
+
+msgid "sum of squares"
+msgstr "平方和"
+
+msgid "swap endianness"
+msgstr "交换字节序"
+
+msgid "tan x"
+msgstr "tan x"
+
+msgid "tanh x"
+msgstr "tanh x"
+
+msgid "tanh⁻¹ x"
+msgstr "tanh⁻¹ x"
+
+msgid "tan⁻¹ x"
+msgstr "tan⁻¹ x"
+
+msgid "two’s complement"
+msgstr "二进制补码"

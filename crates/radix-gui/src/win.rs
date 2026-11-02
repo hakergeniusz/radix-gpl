@@ -260,7 +260,7 @@ impl CalcWindow {
         mode_btn.set_can_shrink(true);
         mode_btn.set_focus_on_click(false);
         mode_btn.add_css_class("flat");
-        mode_btn.set_tooltip_text(Some("Mode Selection"));
+        mode_btn.set_tooltip_text(Some(&crate::i18n::gettext("Mode Selection")));
         mode_btn.set_menu_model(Some(&mode_menu_model()));
         header.set_title_widget(Some(&mode_btn));
 
@@ -279,7 +279,7 @@ impl CalcWindow {
         let back_btn = gtk::Button::from_icon_name("go-previous-symbolic");
         back_btn.add_css_class("flat");
         back_btn.set_focus_on_click(false);
-        back_btn.set_tooltip_text(Some("Financial"));
+        back_btn.set_tooltip_text(Some(&crate::i18n::gettext("Financial")));
         back_btn.set_visible(false);
         header.pack_start(&back_btn);
 
@@ -287,7 +287,7 @@ impl CalcWindow {
         menu_btn.set_icon_name("open-menu-symbolic");
         menu_btn.set_focus_on_click(false);
         menu_btn.add_css_class("flat");
-        menu_btn.set_tooltip_text(Some("Main Menu"));
+        menu_btn.set_tooltip_text(Some(&crate::i18n::gettext("Main Menu")));
         // Primary menu (upstream primary_menu): sections with separators, a
         // "Result Format" header and accelerators for the wired actions.
         menu_btn.set_menu_model(Some(&primary_menu_model()));
@@ -872,11 +872,11 @@ impl CalcWindow {
         let name = MODE_NAMES
             .iter()
             .find(|(m, _)| *m == mode)
-            .map(|(_, n)| *n)
-            .unwrap_or("Basic");
+            .map(|(_, n)| crate::i18n::gettext(n))
+            .unwrap_or_else(|| "Basic".into());
         // Mode menu label + radio state (upstream mode_changed_cb sets the
         // menu button label; the stateful win.mode action drives the dots).
-        self.mode_btn.set_label(name);
+        self.mode_btn.set_label(&name);
         self.mode_action
             .set_state(&button_mode_id(mode).to_variant());
         let stack_name = match mode {
@@ -1028,7 +1028,9 @@ impl CalcWindow {
                         let details = conv.rate_details(self);
                         if details.is_empty() {
                             self.set_status(
-                                "Rate details available for currency conversions",
+                                &crate::i18n::gettext(
+                                    "Rate details available for currency conversions",
+                                ),
                                 false,
                             );
                         } else {
@@ -1184,7 +1186,7 @@ impl CalcWindow {
             return;
         }
         let Some(mut v) = self.parse_display_int() else {
-            self.set_status("Bit editing needs an integer value", true);
+            self.set_status(&crate::i18n::gettext("Bit editing needs an integer value"), true);
             return;
         };
         v ^= 1i128 << bit;
@@ -1594,7 +1596,7 @@ impl CalcWindow {
         // line is empty (upstream leaves equation.base_label blank).
         let base = *self.base.borrow();
         if let Some(p) = self.prog.borrow().as_ref() {
-            p.base_btn.set_label(Self::base_name(base));
+            p.base_btn.set_label(&crate::i18n::gettext(Self::base_name(base)));
         }
         let label = match self.parse_display_int_static() {
             Some(v) => {
@@ -2123,7 +2125,7 @@ impl CalcWindow {
 fn mode_menu_model() -> gio::Menu {
     let section = gio::Menu::new();
     for (mode, name) in MODE_NAMES {
-        let item = gio::MenuItem::new(Some(name), None);
+        let item = gio::MenuItem::new(Some(&crate::i18n::gettext(name)), None);
         item.set_action_and_target_value(
             Some("win.mode"),
             Some(&button_mode_id(mode).to_variant()),
@@ -2141,11 +2143,11 @@ fn primary_menu_model() -> gio::Menu {
     let menu = gio::Menu::new();
 
     let s = gio::Menu::new();
-    s.append(Some("New Window"), Some("app.new-window"));
+    s.append(Some(&crate::i18n::gettext("New Window")), Some("app.new-window"));
     menu.append_section(None, &s);
 
     let s = gio::Menu::new();
-    let clear = gio::MenuItem::new(Some("Clear History"), Some("win.clear"));
+    let clear = gio::MenuItem::new(Some(&crate::i18n::gettext("Clear History")), Some("win.clear"));
     // Hidden while the action is disabled (conversion mode), like upstream.
     clear.set_attribute_value("hidden-when", Some(&"action-disabled".to_variant()));
     s.append_item(&clear);
@@ -2158,23 +2160,23 @@ fn primary_menu_model() -> gio::Menu {
         ("scientific", "Scientific"),
         ("engineering", "Engineering"),
     ] {
-        let item = gio::MenuItem::new(Some(label), None);
+        let item = gio::MenuItem::new(Some(&crate::i18n::gettext(label)), None);
         item.set_action_and_target_value(Some("win.number-format"), Some(&target.to_variant()));
         s.append_item(&item);
     }
-    menu.append_section(Some("Result Format"), &s);
+    menu.append_section(Some(&crate::i18n::gettext("Result Format")), &s);
 
     let s = gio::Menu::new();
-    s.append(Some("Preferences"), Some("win.preferences"));
-    s.append(Some("Keyboard Shortcuts"), Some("app.shortcuts"));
-    s.append(Some("Help"), Some("app.help"));
-    s.append(Some("About Calculator"), Some("app.about"));
+    s.append(Some(&crate::i18n::gettext("Preferences")), Some("win.preferences"));
+    s.append(Some(&crate::i18n::gettext("Keyboard Shortcuts")), Some("app.shortcuts"));
+    s.append(Some(&crate::i18n::gettext("Help")), Some("app.help"));
+    s.append(Some(&crate::i18n::gettext("About Calculator")), Some("app.about"));
     menu.append_section(None, &s);
 
     // Closing the window moves the app to the background (D31), so the
     // menu carries the real exit.
     let s = gio::Menu::new();
-    s.append(Some("Quit"), Some("win.close-all"));
+    s.append(Some(&crate::i18n::gettext("Quit")), Some("win.close-all"));
     menu.append_section(None, &s);
     menu
 }

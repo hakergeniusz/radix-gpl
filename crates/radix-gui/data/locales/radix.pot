@@ -1,0 +1,1002 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: radix 51.1.2\n"
+"Report-Msgid-Bugs-To: https://github.com/hakergeniusz/radix/issues\n"
+"POT-Creation-Date: 2026-11-02\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: crates/radix-gui/src/win.rs:2173
+msgid "About Calculator"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:191
+msgid "Acre"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:91
+msgid "Advanced"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:104
+msgid "All currencies"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:821
+msgid "Angle"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:44
+msgid "Angle units"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:823
+msgid "Area"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:103
+msgid "Astronomical Unit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:581
+msgid "Atmosphere"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:2158
+msgid "Automatic"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:535
+msgid "BTU"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:580
+msgid "Bar"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:90
+msgid "Basic"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:596
+msgid "Bit"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:1189
+msgid "Bit editing needs an integer value"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:90
+msgid "Both"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:597
+msgid "Byte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:133
+msgid "Cable"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:106
+msgid "Calculate"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:22
+msgid "Calculation"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:536
+msgid "Calorie"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:103
+msgid "Cancel"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:154
+msgid "Centimeter"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:357
+msgid "Century"
+msgstr ""
+
+#: crates/radix-gui/src/keypad.rs:909
+msgid "Change Base"
+msgstr ""
+
+#: crates/radix-gui/src/keypad.rs:924
+msgid "Change Word Size"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:150
+msgid "Character"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:161
+msgid "Character or code"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:2150
+msgid "Clear History"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:95
+msgid "Conversion"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:229
+msgid "Cubic Meter"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:283
+msgid "Cup"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:70
+#: crates/radix-core/src/units.rs:833
+msgid "Currency"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:88
+msgid "Currency Code"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:89
+msgid "Currency Name"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:102
+msgid "Currency completion"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:86
+msgid "Currency display"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:75
+msgid "Currency refresh interval"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:76
+msgid "Daily"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:372
+msgid "Day"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:363
+msgid "Decade"
+msgstr ""
+
+#: crates/radix-gui/src/keypad.rs:903
+msgid "Decimal"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:457
+msgid "Degree Celsius"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:472
+msgid "Degree Fahrenheit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:487
+msgid "Degree Kelvin"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:493
+msgid "Degree Rankine"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:46
+msgid "Degrees"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:71
+msgid "Degrees (Decimal)"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:77
+msgid "Degrees (D°M′S″)"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:832
+msgid "Digital Storage"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:826
+msgid "Duration"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:549
+msgid "Electronvolt"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:830
+msgid "Energy"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:2161
+msgid "Engineering"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:548
+msgid "Erg"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:719
+msgid "Exabit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:725
+msgid "Exabyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:731
+msgid "Exbibit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:737
+msgid "Exbibyte"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:300
+msgid "Exchange Rate Data Providers"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:139
+msgid "Fathom"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:124
+msgid "Favorite Currencies"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:105
+msgid "Favorites only"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:418
+msgid "Feet per second"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:282
+#: crates/radix-gui/src/win.rs:92
+msgid "Financial"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:2159
+msgid "Fixed"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:147
+msgid "Foot"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:555
+msgid "Foot-pound"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:828
+msgid "Frequency"
+msgstr ""
+
+#: crates/radix-gui/src/popovers.rs:199
+msgid "Functions"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:249
+#: crates/radix-gui/src/prefs.rs:17
+msgid "General"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:659
+msgid "Gibibit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:665
+msgid "Gibibyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:647
+msgid "Gigabit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:653
+msgid "Gigabyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:444
+msgid "Gigahertz"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:46
+#: crates/radix-core/src/units.rs:84
+msgid "Gradians"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:337
+msgid "Gram"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:185
+msgid "Hectare"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:574
+msgid "Hectopascal"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:2172
+msgid "Help"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:431
+msgid "Hertz"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:373
+msgid "Hour"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:235
+msgid "Imperial Gallon"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:265
+msgid "Imperial Pint"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:148
+msgid "Inch"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:177
+msgid "Insert"
+msgstr ""
+
+#: crates/radix-gui/src/popovers.rs:71
+msgid "Invalid variable name"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:511
+msgid "Joule"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:94
+msgid "Keyboard"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:244
+#: crates/radix-gui/src/win.rs:2171
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:611
+msgid "Kibibit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:617
+msgid "Kibibyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:599
+msgid "Kilobit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:605
+msgid "Kilobyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:542
+msgid "Kilocalorie"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:313
+msgid "Kilograms"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:432
+msgid "Kilohertz"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:517
+msgid "Kilojoule"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:127
+msgid "Kilometer"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:400
+msgid "Kilometers per hour"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:568
+msgid "Kilopascal"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:529
+msgid "Kilowatt hour"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:424
+msgid "Knot"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:402
+msgid "Kronecker delta"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:822
+msgid "Length"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:97
+msgid "Lightyear"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:253
+msgid "Litre"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:290
+msgid "Main Menu"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:825
+msgid "Mass"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:635
+msgid "Mebibit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:641
+msgid "Mebibyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:623
+msgid "Megabit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:629
+msgid "Megabyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:438
+msgid "Megahertz"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:523
+msgid "Megajoule"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:145
+msgid "Meter"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:412
+msgid "Meters per second"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:344
+msgid "Microgram"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:297
+msgid "Microlitre"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:166
+msgid "Micrometer"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:387
+msgid "Microsecond"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:121
+msgid "Mile"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:406
+msgid "Miles per hour"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:338
+msgid "Milligram"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:284
+msgid "Millilitre"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:160
+msgid "Millimeter"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:381
+msgid "Millisecond"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:374
+msgid "Minute"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:263
+msgid "Mode Selection"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:370
+msgid "Month"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:172
+msgid "Nanometer"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:393
+msgid "Nanosecond"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:115
+msgid "Nautical Mile"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:76
+msgid "Never"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:2146
+msgid "New Window"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:598
+msgid "Nibble"
+msgstr ""
+
+#: crates/radix-gui/src/popovers.rs:104
+msgid "No value to store"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:106
+msgid "None"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:834
+msgid "Number Base"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:27
+msgid "Number of decimals"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:325
+msgid "Ounce"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:91
+msgid "Parsec"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:562
+msgid "Pascal"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:707
+msgid "Pebibit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:713
+msgid "Pebibyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:695
+msgid "Petabit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:701
+msgid "Petabyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:178
+msgid "Point"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:319
+msgid "Pound"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:13
+#: crates/radix-gui/src/win.rs:2170
+msgid "Preferences"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:831
+msgid "Pressure"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:93
+msgid "Programming"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:259
+msgid "Quart"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:2179
+msgid "Quit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:109
+msgid "Rack Unit"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:46
+#: crates/radix-core/src/units.rs:78
+msgid "Radians"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:2167
+msgid "Result Format"
+msgstr ""
+
+#: crates/radix-gui/src/win.rs:2160
+msgid "Scientific"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:375
+msgid "Second"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:127
+msgid "Show in conversion lists first"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:827
+msgid "Speed"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:216
+msgid "Square Centimeter"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:198
+msgid "Square Foot"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:204
+msgid "Square Kilometer"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:210
+msgid "Square Meter"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:192
+msgid "Square Mile"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:222
+msgid "Square Millimeter"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:350
+msgid "Stone"
+msgstr ""
+
+#: crates/radix-gui/src/popovers.rs:23
+msgid "Store value"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:683
+msgid "Tebibit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:689
+msgid "Tebibyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:829
+msgid "Temperature"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:671
+msgid "Terabit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:677
+msgid "Terabyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:450
+msgid "Terahertz"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:38
+msgid "Thousands separators"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:312
+msgid "Tonne"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:33
+msgid "Trailing zeroes"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:331
+msgid "Troy Ounce"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:247
+msgid "US Gallon"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:277
+msgid "US Pint"
+msgstr ""
+
+#: crates/radix-gui/src/popovers.rs:19
+msgid "Variable name"
+msgstr ""
+
+#: crates/radix-gui/src/popovers.rs:195
+msgid "Variables"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:824
+msgid "Volume"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:371
+msgid "Week"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:76
+msgid "Weekly"
+msgstr ""
+
+#: crates/radix-gui/src/prefs.rs:57
+msgid "Word size"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:146
+msgid "Yard"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:369
+msgid "Year"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:779
+msgid "Yobibit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:785
+msgid "Yobibyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:767
+msgid "Yottabit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:773
+msgid "Yottabyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:755
+msgid "Zebibit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:761
+msgid "Zebibyte"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:743
+msgid "Zettabit"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:749
+msgid "Zettabyte"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:358
+msgid "absolute value"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:443
+msgid "average"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:317
+msgid "ceiling"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:386
+msgid "combinations"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:243
+msgid "complex argument"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:235
+msgid "conjugate"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:98
+msgid "cos x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:170
+msgid "cosh x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:202
+#: crates/radix-core/src/functions.rs:210
+msgid "cosh⁻¹ x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:130
+#: crates/radix-core/src/functions.rs:138
+msgid "cos⁻¹ x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:309
+msgid "floor"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:333
+msgid "fractional component"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:410
+msgid "greatest common divisor"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:259
+msgid "imaginary component"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:593
+msgid "inHg"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:325
+msgid "integer component"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:418
+msgid "least common multiple"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:374
+msgid "logarithm"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:467
+msgid "maximum value"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:451
+msgid "median"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:459
+msgid "minimum value"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:587
+msgid "mmHg"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:284
+msgid "modular exponentiation"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:292
+msgid "modulus divide"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:342
+msgid "natural logarithm"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:394
+msgid "permutations"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:483
+msgid "population standard deviation"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:499
+msgid "population variance"
+msgstr ""
+
+#: crates/radix-core/src/units.rs:594
+msgid "psi"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:251
+msgid "real component"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:301
+msgid "round"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:475
+msgid "sample standard deviation"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:491
+msgid "sample variance"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:366
+msgid "signum"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:90
+msgid "sin x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:162
+msgid "sinh x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:186
+#: crates/radix-core/src/functions.rs:194
+msgid "sinh⁻¹ x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:114
+#: crates/radix-core/src/functions.rs:122
+msgid "sin⁻¹ x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:350
+msgid "square root"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:427
+msgid "sum"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:435
+msgid "sum of squares"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:276
+msgid "swap endianness"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:106
+msgid "tan x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:178
+msgid "tanh x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:218
+#: crates/radix-core/src/functions.rs:226
+msgid "tanh⁻¹ x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:146
+#: crates/radix-core/src/functions.rs:154
+msgid "tan⁻¹ x"
+msgstr ""
+
+#: crates/radix-core/src/functions.rs:268
+msgid "two’s complement"
+msgstr ""

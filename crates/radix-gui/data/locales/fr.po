@@ -1,0 +1,746 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: radix 51.1.2\n"
+"Report-Msgid-Bugs-To: https://github.com/hakergeniusz/radix/issues\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-11-02 19:30+0000\n"
+"Last-Translator: ZCode (GLM-5.3-Flash)\n"
+"Language-Team: fr\n""Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "About Calculator"
+msgstr "À propos de la calculatrice"
+
+msgid "Acre"
+msgstr "Acre"
+
+msgid "Advanced"
+msgstr "Avancé"
+
+msgid "All currencies"
+msgstr "Toutes les devises"
+
+msgid "Angle"
+msgstr "Angle"
+
+msgid "Angle units"
+msgstr "Unités d'angle"
+
+msgid "Area"
+msgstr "Superficie"
+
+msgid "Astronomical Unit"
+msgstr "Unité astronomique"
+
+msgid "Atmosphere"
+msgstr "Atmosphère"
+
+msgid "Automatic"
+msgstr "Automatique"
+
+msgid "BTU"
+msgstr "BTU"
+
+msgid "Bar"
+msgstr "Bar"
+
+msgid "Basic"
+msgstr "Basique"
+
+msgid "Bit"
+msgstr "Bit"
+
+msgid "Bit editing needs an integer value"
+msgstr "La modification des bits nécessite une valeur entière"
+
+msgid "Both"
+msgstr "Les deux"
+
+msgid "Byte"
+msgstr "Octet"
+
+msgid "Cable"
+msgstr "Câble"
+
+msgid "Calculate"
+msgstr "Calculer"
+
+msgid "Calculation"
+msgstr "Calcul"
+
+msgid "Calorie"
+msgstr "Calorie"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Centimeter"
+msgstr "Centimètre"
+
+msgid "Century"
+msgstr "Siècle"
+
+msgid "Change Base"
+msgstr "Changer de base"
+
+msgid "Change Word Size"
+msgstr "Changer la taille de mot"
+
+msgid "Character"
+msgstr "Caractère"
+
+msgid "Character or code"
+msgstr "Caractère ou code"
+
+msgid "Clear History"
+msgstr "Effacer l'historique"
+
+msgid "Conversion"
+msgstr "Conversion"
+
+msgid "Cubic Meter"
+msgstr "Mètre cube"
+
+msgid "Cup"
+msgstr "Tasse"
+
+msgid "Currency"
+msgstr "Devise"
+
+msgid "Currency Code"
+msgstr "Code de la devise"
+
+msgid "Currency Name"
+msgstr "Nom de la devise"
+
+msgid "Currency completion"
+msgstr "Suggestion de devises"
+
+msgid "Currency display"
+msgstr "Affichage des devises"
+
+msgid "Currency refresh interval"
+msgstr "Intervalle d'actualisation des devises"
+
+msgid "Daily"
+msgstr "Chaque jour"
+
+msgid "Day"
+msgstr "Jour"
+
+msgid "Decade"
+msgstr "Décennie"
+
+msgid "Decimal"
+msgstr "Décimal"
+
+msgid "Degree Celsius"
+msgstr "Degré Celsius"
+
+msgid "Degree Fahrenheit"
+msgstr "Degré Fahrenheit"
+
+msgid "Degree Kelvin"
+msgstr "Degré Kelvin"
+
+msgid "Degree Rankine"
+msgstr "Degré Rankine"
+
+msgid "Degrees"
+msgstr "Degrés"
+
+msgid "Degrees (Decimal)"
+msgstr "Degrés (décimal)"
+
+msgid "Degrees (D°M′S″)"
+msgstr "Degrés (D°M′S″)"
+
+msgid "Digital Storage"
+msgstr "Stockage numérique"
+
+msgid "Duration"
+msgstr "Durée"
+
+msgid "Electronvolt"
+msgstr "Électronvolt"
+
+msgid "Energy"
+msgstr "Énergie"
+
+msgid "Engineering"
+msgstr "Ingénierie"
+
+msgid "Erg"
+msgstr "Erg"
+
+msgid "Exabit"
+msgstr "Exabit"
+
+msgid "Exabyte"
+msgstr "Exaoctet"
+
+msgid "Exbibit"
+msgstr "Exbibit"
+
+msgid "Exbibyte"
+msgstr "Exbibyte"
+
+msgid "Exchange Rate Data Providers"
+msgstr "Fournisseurs de taux de change"
+
+msgid "Fathom"
+msgstr "Brasse"
+
+msgid "Favorite Currencies"
+msgstr "Devises favorites"
+
+msgid "Favorites only"
+msgstr "Favorites uniquement"
+
+msgid "Feet per second"
+msgstr "Pieds par seconde"
+
+msgid "Financial"
+msgstr "Financier"
+
+msgid "Fixed"
+msgstr "Fixe"
+
+msgid "Foot"
+msgstr "Pied"
+
+msgid "Foot-pound"
+msgstr "Pied-livre"
+
+msgid "Frequency"
+msgstr "Fréquence"
+
+msgid "Functions"
+msgstr "Fonctions"
+
+msgid "General"
+msgstr "Général"
+
+msgid "Gibibit"
+msgstr "Gibibit"
+
+msgid "Gibibyte"
+msgstr "Gibioctet"
+
+msgid "Gigabit"
+msgstr "Gigabit"
+
+msgid "Gigabyte"
+msgstr "Gigaoctet"
+
+msgid "Gigahertz"
+msgstr "Gigahertz"
+
+msgid "Gradians"
+msgstr "Grades"
+
+msgid "Gram"
+msgstr "Gramme"
+
+msgid "Hectare"
+msgstr "Hectare"
+
+msgid "Hectopascal"
+msgstr "Hectopascal"
+
+msgid "Help"
+msgstr "Aide"
+
+msgid "Hertz"
+msgstr "Hertz"
+
+msgid "Hour"
+msgstr "Heure"
+
+msgid "Imperial Gallon"
+msgstr "Gallon impérial"
+
+msgid "Imperial Pint"
+msgstr "Pinte impériale"
+
+msgid "Inch"
+msgstr "Pouce"
+
+msgid "Insert"
+msgstr "Insérer"
+
+msgid "Invalid variable name"
+msgstr "Nom de variable non valide"
+
+msgid "Joule"
+msgstr "Joule"
+
+msgid "Keyboard"
+msgstr "Clavier"
+
+msgid "Keyboard Shortcuts"
+msgstr "Raccourcis clavier"
+
+msgid "Kibibit"
+msgstr "Kibibit"
+
+msgid "Kibibyte"
+msgstr "Kibioctet"
+
+msgid "Kilobit"
+msgstr "Kilobit"
+
+msgid "Kilobyte"
+msgstr "Kilooctet"
+
+msgid "Kilocalorie"
+msgstr "Kilocalorie"
+
+msgid "Kilograms"
+msgstr "Kilogrammes"
+
+msgid "Kilohertz"
+msgstr "Kilohertz"
+
+msgid "Kilojoule"
+msgstr "Kilojoule"
+
+msgid "Kilometer"
+msgstr "Kilomètre"
+
+msgid "Kilometers per hour"
+msgstr "Kilomètres par heure"
+
+msgid "Kilopascal"
+msgstr "Kilopascal"
+
+msgid "Kilowatt hour"
+msgstr "Kilowattheure"
+
+msgid "Knot"
+msgstr "Nœud"
+
+msgid "Kronecker delta"
+msgstr "Delta de Kronecker"
+
+msgid "Length"
+msgstr "Longueur"
+
+msgid "Lightyear"
+msgstr "Année-lumière"
+
+msgid "Litre"
+msgstr "Litre"
+
+msgid "Main Menu"
+msgstr "Menu principal"
+
+msgid "Mass"
+msgstr "Masse"
+
+msgid "Mebibit"
+msgstr "Mebibit"
+
+msgid "Mebibyte"
+msgstr "Mebioctet"
+
+msgid "Megabit"
+msgstr "Mégabit"
+
+msgid "Megabyte"
+msgstr "Mégaoctet"
+
+msgid "Megahertz"
+msgstr "Mégahertz"
+
+msgid "Megajoule"
+msgstr "Mégajoule"
+
+msgid "Meter"
+msgstr "Mètre"
+
+msgid "Meters per second"
+msgstr "Mètres par seconde"
+
+msgid "Microgram"
+msgstr "Microgramme"
+
+msgid "Microlitre"
+msgstr "Microlitre"
+
+msgid "Micrometer"
+msgstr "Micromètre"
+
+msgid "Microsecond"
+msgstr "Microseconde"
+
+msgid "Mile"
+msgstr "Mile"
+
+msgid "Miles per hour"
+msgstr "Miles par heure"
+
+msgid "Milligram"
+msgstr "Milligramme"
+
+msgid "Millilitre"
+msgstr "Millilitre"
+
+msgid "Millimeter"
+msgstr "Millimètre"
+
+msgid "Millisecond"
+msgstr "Milliseconde"
+
+msgid "Minute"
+msgstr "Minute"
+
+msgid "Mode Selection"
+msgstr "Sélection du mode"
+
+msgid "Month"
+msgstr "Mois"
+
+msgid "Nanometer"
+msgstr "Nanomètre"
+
+msgid "Nanosecond"
+msgstr "Nanoseconde"
+
+msgid "Nautical Mile"
+msgstr "Mille marin"
+
+msgid "Never"
+msgstr "Jamais"
+
+msgid "New Window"
+msgstr "Nouvelle fenêtre"
+
+msgid "Nibble"
+msgstr "Quartet"
+
+msgid "No value to store"
+msgstr "Aucune valeur à enregistrer"
+
+msgid "None"
+msgstr "Aucune"
+
+msgid "Number Base"
+msgstr "Base numérique"
+
+msgid "Number of decimals"
+msgstr "Nombre de décimales"
+
+msgid "Ounce"
+msgstr "Once"
+
+msgid "Parsec"
+msgstr "Parsec"
+
+msgid "Pascal"
+msgstr "Pascal"
+
+msgid "Pebibit"
+msgstr "Pebibit"
+
+msgid "Pebibyte"
+msgstr "Pebioctet"
+
+msgid "Petabit"
+msgstr "Pétabit"
+
+msgid "Petabyte"
+msgstr "Pétaoctet"
+
+msgid "Point"
+msgstr "Point"
+
+msgid "Pound"
+msgstr "Livre"
+
+msgid "Preferences"
+msgstr "Préférences"
+
+msgid "Pressure"
+msgstr "Pression"
+
+msgid "Programming"
+msgstr "Programmation"
+
+msgid "Quart"
+msgstr "Quart"
+
+msgid "Quit"
+msgstr "Quitter"
+
+msgid "Rack Unit"
+msgstr "Unité de rack"
+
+msgid "Radians"
+msgstr "Radians"
+
+msgid "Result Format"
+msgstr "Format du résultat"
+
+msgid "Scientific"
+msgstr "Scientifique"
+
+msgid "Second"
+msgstr "Seconde"
+
+msgid "Show in conversion lists first"
+msgstr "Afficher en premier dans les listes de conversion"
+
+msgid "Speed"
+msgstr "Vitesse"
+
+msgid "Square Centimeter"
+msgstr "Centimètre carré"
+
+msgid "Square Foot"
+msgstr "Pied carré"
+
+msgid "Square Kilometer"
+msgstr "Kilomètre carré"
+
+msgid "Square Meter"
+msgstr "Mètre carré"
+
+msgid "Square Mile"
+msgstr "Mile carré"
+
+msgid "Square Millimeter"
+msgstr "Millimètre carré"
+
+msgid "Stone"
+msgstr "Stone"
+
+msgid "Store value"
+msgstr "Enregistrer la valeur"
+
+msgid "Tebibit"
+msgstr "Tebibit"
+
+msgid "Tebibyte"
+msgstr "Tebioctet"
+
+msgid "Temperature"
+msgstr "Température"
+
+msgid "Terabit"
+msgstr "Térabit"
+
+msgid "Terabyte"
+msgstr "Téraoctet"
+
+msgid "Terahertz"
+msgstr "Térahertz"
+
+msgid "Thousands separators"
+msgstr "Séparateurs de milliers"
+
+msgid "Tonne"
+msgstr "Tonne"
+
+msgid "Trailing zeroes"
+msgstr "Zéros finaux"
+
+msgid "Troy Ounce"
+msgstr "Once troy"
+
+msgid "US Gallon"
+msgstr "Gallon américain"
+
+msgid "US Pint"
+msgstr "Pinte américaine"
+
+msgid "Variable name"
+msgstr "Nom de la variable"
+
+msgid "Variables"
+msgstr "Variables"
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Week"
+msgstr "Semaine"
+
+msgid "Weekly"
+msgstr "Chaque semaine"
+
+msgid "Word size"
+msgstr "Taille de mot"
+
+msgid "Yard"
+msgstr "Yard"
+
+msgid "Year"
+msgstr "An"
+
+msgid "Yobibit"
+msgstr "Yobibit"
+
+msgid "Yobibyte"
+msgstr "Yobioctet"
+
+msgid "Yottabit"
+msgstr "Yottabit"
+
+msgid "Yottabyte"
+msgstr "Yottaoctet"
+
+msgid "Zebibit"
+msgstr "Zebibit"
+
+msgid "Zebibyte"
+msgstr "Zebioctet"
+
+msgid "Zettabit"
+msgstr "Zettabit"
+
+msgid "Zettabyte"
+msgstr "Zettaoctet"
+
+msgid "absolute value"
+msgstr "valeur absolue"
+
+msgid "average"
+msgstr "moyenne"
+
+msgid "ceiling"
+msgstr "arrondi supérieur"
+
+msgid "combinations"
+msgstr "combinaisons"
+
+msgid "complex argument"
+msgstr "argument complexe"
+
+msgid "conjugate"
+msgstr "conjugué"
+
+msgid "cos x"
+msgstr "cos x"
+
+msgid "cosh x"
+msgstr "cosh x"
+
+msgid "cosh⁻¹ x"
+msgstr "cosh⁻¹ x"
+
+msgid "cos⁻¹ x"
+msgstr "cos⁻¹ x"
+
+msgid "floor"
+msgstr "arrondi inférieur"
+
+msgid "fractional component"
+msgstr "partie fractionnaire"
+
+msgid "greatest common divisor"
+msgstr "plus grand commun diviseur"
+
+msgid "imaginary component"
+msgstr "partie imaginaire"
+
+msgid "inHg"
+msgstr "inHg"
+
+msgid "integer component"
+msgstr "partie entière"
+
+msgid "least common multiple"
+msgstr "plus petit commun multiple"
+
+msgid "logarithm"
+msgstr "logarithme"
+
+msgid "maximum value"
+msgstr "valeur maximale"
+
+msgid "median"
+msgstr "médiane"
+
+msgid "minimum value"
+msgstr "valeur minimale"
+
+msgid "mmHg"
+msgstr "mmHg"
+
+msgid "modular exponentiation"
+msgstr "exponentiation modulaire"
+
+msgid "modulus divide"
+msgstr "division modulaire"
+
+msgid "natural logarithm"
+msgstr "logarithme népérien"
+
+msgid "permutations"
+msgstr "permutations"
+
+msgid "population standard deviation"
+msgstr "écart type de la population"
+
+msgid "population variance"
+msgstr "variance de la population"
+
+msgid "psi"
+msgstr "psi"
+
+msgid "real component"
+msgstr "partie réelle"
+
+msgid "round"
+msgstr "arrondi"
+
+msgid "sample standard deviation"
+msgstr "écart type de l'échantillon"
+
+msgid "sample variance"
+msgstr "variance de l'échantillon"
+
+msgid "signum"
+msgstr "signe"
+
+msgid "sin x"
+msgstr "sin x"
+
+msgid "sinh x"
+msgstr "sinh x"
+
+msgid "sinh⁻¹ x"
+msgstr "sinh⁻¹ x"
+
+msgid "sin⁻¹ x"
+msgstr "sin⁻¹ x"
+
+msgid "square root"
+msgstr "racine carrée"
+
+msgid "sum"
+msgstr "somme"
+
+msgid "sum of squares"
+msgstr "somme des carrés"
+
+msgid "swap endianness"
+msgstr "inverser le boutisme"
+
+msgid "tan x"
+msgstr "tan x"
+
+msgid "tanh x"
+msgstr "tanh x"
+
+msgid "tanh⁻¹ x"
+msgstr "tanh⁻¹ x"
+
+msgid "tan⁻¹ x"
+msgstr "tan⁻¹ x"
+
+msgid "two’s complement"
+msgstr "complément à deux"

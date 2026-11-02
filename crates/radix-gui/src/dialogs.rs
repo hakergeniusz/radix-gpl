@@ -89,7 +89,7 @@ pub fn open_financial_dialog(win: &Rc<CalcWindow>, name: &'static str) {
         .iter()
         .map(|p| {
             let e = gtk::Entry::new();
-            e.set_placeholder_text(Some(p));
+            e.set_placeholder_text(Some(&crate::i18n::gettext(p)));
             // Entries accept only numbers (doc 04 §4).
             e.set_input_purpose(gtk::InputPurpose::Number);
             root.append(&e);
@@ -100,10 +100,10 @@ pub fn open_financial_dialog(win: &Rc<CalcWindow>, name: &'static str) {
     // Headered presentation (doc 13 §8.3): header bar with title, Cancel
     // start, accent Calculate end.
     let header = adw::HeaderBar::new();
-    let cancel_btn = gtk::Button::with_label("Cancel");
+    let cancel_btn = gtk::Button::with_label(&crate::i18n::gettext("Cancel"));
     cancel_btn.add_css_class("flat");
     header.pack_start(&cancel_btn);
-    let solve_btn = gtk::Button::with_label("Calculate");
+    let solve_btn = gtk::Button::with_label(&crate::i18n::gettext("Calculate"));
     solve_btn.add_css_class("suggested-action");
     header.pack_end(&solve_btn);
     let toolbar = adw::ToolbarView::new();
@@ -147,7 +147,7 @@ pub fn open_character_dialog(
     win: &Rc<CalcWindow>,
 ) {
     let dialog = adw::Dialog::new();
-    dialog.set_title("Character");
+    dialog.set_title(&crate::i18n::gettext("Character"));
     // Floating sheet with 18 px corners; action buttons use the
     // action-button look (doc 13 §8.4).
     dialog.add_css_class("char-dialog");
@@ -158,18 +158,23 @@ pub fn open_character_dialog(
     root.set_margin_end(12);
 
     let entry = gtk::Entry::new();
-    entry.set_placeholder_text(Some("Character or code"));
+    entry.set_placeholder_text(Some(&crate::i18n::gettext("Character or code")));
     root.append(&entry);
 
-    let combo =
-        gtk::DropDown::from_strings(&["Unicode code point", "UTF-8 bytes", "UTF-16 code units"]);
+    let combo_names: Vec<String> = ["Unicode code point", "UTF-8 bytes", "UTF-16 code units"]
+        .iter()
+        .map(|s| crate::i18n::gettext(s))
+        .collect();
+    let combo = gtk::DropDown::from_strings(
+        &combo_names.iter().map(|s| s.as_str()).collect::<Vec<_>>(),
+    );
     root.append(&combo);
 
     let preview = gtk::Label::new(None);
     preview.set_selectable(true);
     root.append(&preview);
 
-    let insert_btn = gtk::Button::with_label("Insert");
+    let insert_btn = gtk::Button::with_label(&crate::i18n::gettext("Insert"));
     insert_btn.add_css_class("suggested-action");
     insert_btn.add_css_class("action-button");
     root.append(&insert_btn);
@@ -236,12 +241,12 @@ pub fn open_character_dialog(
 /// Modes, Programming Mode, Keyboard Entry, Equation).
 pub fn open_shortcuts(parent: &impl gtk::glib::object::IsA<gtk::Window>) {
     let win = gtk::ShortcutsWindow::builder()
-        .title("Keyboard Shortcuts")
+        .title(crate::i18n::gettext("Keyboard Shortcuts"))
         .build();
     let section = gtk::ShortcutsSection::builder()
         .section_name("general")
         .build();
-    let group = gtk::ShortcutsGroup::builder().title("General").build();
+    let group = gtk::ShortcutsGroup::builder().title(crate::i18n::gettext("General")).build();
     let entries: [(&str, &str); 16] = [
         ("Solve", "Return"),
         ("Clear display", "Escape"),
@@ -262,7 +267,7 @@ pub fn open_shortcuts(parent: &impl gtk::glib::object::IsA<gtk::Window>) {
     ];
     for (title, accel) in entries {
         let item = gtk::ShortcutsShortcut::builder()
-            .title(title)
+            .title(crate::i18n::gettext(title))
             .accelerator(accel)
             .build();
         group.append(&item);
@@ -292,7 +297,7 @@ pub fn open_about(parent: &impl gtk::glib::object::IsA<gtk::Window>) {
         .license_type(gtk::License::MitX11)
         .build();
     about.add_credit_section(
-        Some("Exchange Rate Data Providers"),
+        Some(&crate::i18n::gettext("Exchange Rate Data Providers")),
         &[
             "European Central Bank",
             "International Monetary Fund",

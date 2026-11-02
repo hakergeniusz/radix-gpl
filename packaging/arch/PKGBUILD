@@ -61,5 +61,13 @@ package() {
     "$pkgdir/usr/share/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg"
   install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg \
     "$pkgdir/usr/share/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg"
+  # Gettext catalogs (D33): only language dirs (with an LC_MESSAGES
+  # subtree) are installed; the .mo files are committed in-tree.
+  install -d "$pkgdir/usr/share/locale"
+  for l in crates/radix-gui/data/locales/*/; do
+    if [ -d "$l/LC_MESSAGES" ]; then
+      cp -a "$l" "$pkgdir/usr/share/locale/"
+    fi
+  done
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/radix/LICENSE"
 }
