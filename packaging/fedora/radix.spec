@@ -54,6 +54,13 @@ install -Dm644 crates/radix-gui/data/icons/hicolor/scalable/apps/io.github.haker
   %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg
 install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg \
   %{buildroot}%{_datadir}/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg
+# Gettext catalogs (D33): only language dirs (with an LC_MESSAGES
+# subtree) are installed; the .mo files are committed in-tree.
+install -d %{buildroot}%{_datadir}/locale
+for l in crates/radix-gui/data/locales/*/; do
+  [ -d "$l/LC_MESSAGES" ] && cp -a "$l" %{buildroot}%{_datadir}/locale/
+done
+true
 
 %check
 ./target/release/radix --version
@@ -70,6 +77,7 @@ install -Dm644 crates/radix-gui/data/icons/hicolor/symbolic/apps/io.github.haker
 %{_datadir}/metainfo/io.github.hakergeniusz.Radix.metainfo.xml
 %{_datadir}/icons/hicolor/scalable/apps/io.github.hakergeniusz.Radix.svg
 %{_datadir}/icons/hicolor/symbolic/apps/io.github.hakergeniusz.Radix-symbolic.svg
+%{_datadir}/locale/*/LC_MESSAGES/radix.mo
 
 %changelog
 * Sun Nov 02 2026 hakergeniusz <hakergeniusz@users.noreply.github.com> - 51.1.2-1

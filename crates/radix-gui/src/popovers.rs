@@ -16,11 +16,11 @@ fn variables_content(root: &gtk::Box, pop: &Popover, win: &Rc<CalcWindow>) {
     // Name entry + store button (doc 06 §7).
     let name_row = gtk::Box::new(Orientation::Horizontal, 6);
     let name_entry = gtk::Entry::new();
-    name_entry.set_placeholder_text(Some("Variable name"));
+    name_entry.set_placeholder_text(Some(&crate::i18n::gettext("Variable name")));
     name_entry.set_hexpand(true);
     let store_btn = gtk::Button::from_icon_name("document-save-symbolic");
     store_btn.add_css_class("flat");
-    store_btn.set_tooltip_text(Some("Store value"));
+    store_btn.set_tooltip_text(Some(&crate::i18n::gettext("Store value")));
     name_row.append(&name_entry);
     name_row.append(&store_btn);
     root.append(&name_row);
@@ -68,7 +68,7 @@ fn variables_content(root: &gtk::Box, pop: &Popover, win: &Rc<CalcWindow>) {
                 && !radix_core::constants::is_constant(&name)
                 && !win.eval_state.lock().unwrap().functions.contains_key(&name);
             if !valid {
-                status.set_text("Invalid variable name");
+                status.set_text(&crate::i18n::gettext("Invalid variable name"));
                 entry.add_css_class("error");
                 return;
             }
@@ -101,7 +101,7 @@ fn variables_content(root: &gtk::Box, pop: &Popover, win: &Rc<CalcWindow>) {
                 );
                 pop.popdown();
             } else {
-                status.set_text("No value to store");
+                status.set_text(&crate::i18n::gettext("No value to store"));
             }
         }
     });
@@ -126,7 +126,7 @@ fn functions_content(root: &gtk::Box, pop: &Popover, win: &Rc<CalcWindow>) {
     root.append(&scroll);
 
     for f in radix_core::functions::builtin_functions() {
-        let label = format!("{}()  —  {}", f.name, f.description);
+        let label = format!("{}()  —  {}", f.name, crate::i18n::gettext(f.description));
         let row = gtk::Box::new(Orientation::Horizontal, 6);
         let lbl = gtk::Label::new(Some(&label));
         lbl.set_halign(gtk::Align::Start);
@@ -192,11 +192,11 @@ pub fn fill_math_popover(
     }
     match kind {
         crate::keypad::MathPopoverKind::Variables => {
-            root.append(&section_header("Variables"));
+            root.append(&section_header(&crate::i18n::gettext("Variables")));
             variables_content(root, pop, win);
         }
         crate::keypad::MathPopoverKind::Functions => {
-            root.append(&section_header("Functions"));
+            root.append(&section_header(&crate::i18n::gettext("Functions")));
             functions_content(root, pop, win);
         }
     }

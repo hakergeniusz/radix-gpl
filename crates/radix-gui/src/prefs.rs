@@ -10,40 +10,40 @@ use std::rc::Rc;
 
 pub fn open_preferences(win: &Rc<CalcWindow>) {
     let dialog = adw::PreferencesDialog::new();
-    dialog.set_title("Preferences");
+    dialog.set_title(&crate::i18n::gettext("Preferences"));
     dialog.set_search_enabled(true);
 
     let page = adw::PreferencesPage::new();
-    page.set_title("General");
+    page.set_title(&crate::i18n::gettext("General"));
     page.set_icon_name(Some("preferences-system-symbolic"));
     dialog.add(&page);
 
     let group = adw::PreferencesGroup::new();
-    group.set_title("Calculation");
+    group.set_title(&crate::i18n::gettext("Calculation"));
     page.add(&group);
 
     // Number of decimals (accuracy, doc 06 §8).
     let accuracy = adw::SpinRow::with_range(0.0, 15.0, 1.0);
-    accuracy.set_title("Number of decimals");
+    accuracy.set_title(&crate::i18n::gettext("Number of decimals"));
     accuracy.set_value(win.settings.borrow().accuracy.max(0) as f64);
     group.add(&accuracy);
 
     // Trailing zeroes / thousands separators.
     let zeroes = adw::SwitchRow::new();
-    zeroes.set_title("Trailing zeroes");
+    zeroes.set_title(&crate::i18n::gettext("Trailing zeroes"));
     zeroes.set_active(win.settings.borrow().show_zeroes);
     group.add(&zeroes);
 
     let thousands = adw::SwitchRow::new();
-    thousands.set_title("Thousands separators");
+    thousands.set_title(&crate::i18n::gettext("Thousands separators"));
     thousands.set_active(win.settings.borrow().show_thousands);
     group.add(&thousands);
 
     // Angle units.
     let angle = adw::ComboRow::new();
-    angle.set_title("Angle units");
+    angle.set_title(&crate::i18n::gettext("Angle units"));
     angle.set_model(Some(&gtk::StringList::new(&[
-        "Degrees", "Radians", "Gradians",
+        &crate::i18n::gettext("Degrees"), &crate::i18n::gettext("Radians"), &crate::i18n::gettext("Gradians"),
     ])));
     angle.set_selected(match win.settings.borrow().angle_units {
         AngleSetting::Degrees => 0,
@@ -54,7 +54,7 @@ pub fn open_preferences(win: &Rc<CalcWindow>) {
 
     // Word size.
     let word = adw::ComboRow::new();
-    word.set_title("Word size");
+    word.set_title(&crate::i18n::gettext("Word size"));
     word.set_model(Some(&gtk::StringList::new(&[
         "8-bit", "16-bit", "32-bit", "64-bit",
     ])));
@@ -67,13 +67,13 @@ pub fn open_preferences(win: &Rc<CalcWindow>) {
     group.add(&word);
 
     let group2 = adw::PreferencesGroup::new();
-    group2.set_title("Currency");
+    group2.set_title(&crate::i18n::gettext("Currency"));
     page.add(&group2);
 
     // Refresh interval.
     let refresh = adw::ComboRow::new();
-    refresh.set_title("Currency refresh interval");
-    refresh.set_model(Some(&gtk::StringList::new(&["Never", "Daily", "Weekly"])));
+    refresh.set_title(&crate::i18n::gettext("Currency refresh interval"));
+    refresh.set_model(Some(&gtk::StringList::new(&[&crate::i18n::gettext("Never"), &crate::i18n::gettext("Daily"), &crate::i18n::gettext("Weekly")])));
     refresh.set_selected(match win.settings.borrow().refresh_interval {
         0 => 0,
         604800 => 2,
@@ -83,11 +83,11 @@ pub fn open_preferences(win: &Rc<CalcWindow>) {
 
     // Currency display.
     let display = adw::ComboRow::new();
-    display.set_title("Currency display");
+    display.set_title(&crate::i18n::gettext("Currency display"));
     display.set_model(Some(&gtk::StringList::new(&[
-        "Currency Code",
-        "Currency Name",
-        "Both",
+        &crate::i18n::gettext("Currency Code"),
+        &crate::i18n::gettext("Currency Name"),
+        &crate::i18n::gettext("Both"),
     ])));
     display.set_selected(match win.settings.borrow().currency_display {
         CurrencyDisplay::Code => 0,
@@ -99,11 +99,11 @@ pub fn open_preferences(win: &Rc<CalcWindow>) {
     // Currency completion: the currency/favorite subset of
     // `enabled-completions` (doc 06 §10).
     let completion = adw::ComboRow::new();
-    completion.set_title("Currency completion");
+    completion.set_title(&crate::i18n::gettext("Currency completion"));
     completion.set_model(Some(&gtk::StringList::new(&[
-        "All currencies",
-        "Favorites only",
-        "None",
+        &crate::i18n::gettext("All currencies"),
+        &crate::i18n::gettext("Favorites only"),
+        &crate::i18n::gettext("None"),
     ])));
     {
         let ec = &win.settings.borrow().enabled_completions;
@@ -121,10 +121,10 @@ pub fn open_preferences(win: &Rc<CalcWindow>) {
 
     // Favorite currencies subpage (doc 06 §8): a switch per currency.
     let fav_page = adw::PreferencesPage::new();
-    fav_page.set_title("Favorite Currencies");
+    fav_page.set_title(&crate::i18n::gettext("Favorite Currencies"));
     fav_page.set_icon_name(Some("starred-symbolic"));
     let fav_group = adw::PreferencesGroup::new();
-    fav_group.set_title("Show in conversion lists first");
+    fav_group.set_title(&crate::i18n::gettext("Show in conversion lists first"));
     fav_page.add(&fav_group);
     for c in CURRENCIES {
         let row = adw::SwitchRow::new();

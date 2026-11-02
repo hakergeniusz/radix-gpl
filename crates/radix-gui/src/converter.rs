@@ -31,6 +31,10 @@ pub struct ConverterPanel {
     refresh_btn: gtk::Button,
     refresh_spinner: gtk::Spinner,
     state: RefCell<State>,
+    /// Current (key, display) unit pairs behind both unit dropdowns (D33):
+    /// the model holds translated display labels, selection maps to keys
+    /// by index.
+    unit_items: RefCell<Vec<(String, String)>>,
 }
 
 struct State {
@@ -69,7 +73,9 @@ fn unit_list(category: &str, settings: &Settings) -> Vec<(String, String)> {
         units::UNITS
             .iter()
             .filter(|u| u.category == category)
-            .map(|u| (u.name.to_string(), u.name.to_string()))
+            // Key stays the English def name (unit_by_name matches it);
+            // only the display label is translated (D33).
+            .map(|u| (u.name.to_string(), crate::i18n::gettext(u.name)))
             .collect()
     }
 }
@@ -133,7 +139,7 @@ impl ConverterPanel {
 
         // Category row.
         let cats = categories_sorted();
-        let cat_names: Vec<String> = cats.iter().map(|(_, d)| d.to_string()).collect();
+        let cat_names: Vec<String> = cats.iter().map(|(_, d)| crate::i18n::gettext(d)).collect();
         let cat_list =
             gtk::StringList::new(&cat_names.iter().map(|s| s.as_str()).collect::<Vec<_>>());
         let category_dd = gtk::DropDown::new(Some(cat_list), gtk::Expression::NONE);
@@ -150,8 +156,14 @@ impl ConverterPanel {
         from_dd.set_hexpand(true);
         to_dd.set_hexpand(true);
 
-        // Number-base radix selector (Number Base category only).
-        let base_list = gtk::StringList::new(&["Binary", "Octal", "Decimal", "Hexadecimal"]);
+        // Number-base radix selector (Number Base category only); the
+        // selected index maps to [2, 8, 10, 16], so labels may translate.
+        let base_names: Vec<String> = ["Binary", "Octal", "Decimal", "Hexadecimal"]
+            .iter()
+            .map(|s| crate::i18n::gettext(s))
+            .collect();
+        let base_list =
+            gtk::StringList::new(&base_names.iter().map(|s| s.as_str()).collect::<Vec<_>>());
         let base_dd = gtk::DropDown::new(Some(base_list), gtk::Expression::NONE);
         base_dd.set_visible(false);
         base_dd.set_margin_top(6);
@@ -216,6 +228,7 @@ impl ConverterPanel {
             refresh_btn: refresh_btn.clone(),
             refresh_spinner,
             state,
+            unit_items: RefCell::new(Vec::new()),
         });
 
         // ---- signals ----------------------------------------------------
@@ -296,22 +309,19 @@ impl ConverterPanel {
         dd.set_enable_search(names.len() > 10);
     }
 
-    fn selected_name(dd: &gtk::DropDown) -> Option<String> {
-        dd.selected_item()
-            .and_then(|o| o.downcast::<gtk::StringObject>().ok())
-            .map(|s| s.string().to_string())
+    /// The unit key behind a dropdown's current selection: the model holds
+    /// translated display labels, so the key comes from the pair list by
+    /// index (D33).
+    fn selected_key(&self, dd: &gtk::DropDown) -> Option<String> {
+        let idx = dd.selected() as usize;
+        self.unit_items.borrow().get(idx).map(|(k, _)| k.clone())
     }
 
-    fn select_name(dd: &gtk::DropDown, name: &str) {
-        let n = dd.model().map(|m| m.n_items()).unwrap_or(0);
-        for i in 0..n {
-            let item = dd.model().unwrap().item(i);
-            if let Some(so) = item.and_then(|o| o.downcast::<gtk::StringObject>().ok()) {
-                if so.string() == name {
-                    dd.set_selected(i);
-                    return;
-                }
-            }
+    /// Select a unit by its (untranslated) key.
+    fn select_key(&self, dd: &gtk::DropDown, key: &str) {
+        let items = self.unit_items.borrow();
+        if let Some(idx) = items.iter().position(|(k, _)| k == key) {
+            dd.set_selected(idx as u32);
         }
     }
 
@@ -336,8 +346,10 @@ impl ConverterPanel {
         self.state.borrow_mut().updating = true;
         let settings = win.settings.borrow();
         let items = unit_list(key, &settings);
-        let names: Vec<String> = items.iter().map(|(n, _)| n.clone()).collect();
+        let keys: Vec<String> = items.iter().map(|(k, _)| k.clone()).collect();
+        let names: Vec<String> = items.iter().map(|(_, d)| d.clone()).collect();
         drop(settings);
+        *self.unit_items.borrow_mut() = items;
         Self::set_dropdown_items(&self.from_dd, &names);
         Self::set_dropdown_items(&self.to_dd, &names);
 
@@ -366,13 +378,13 @@ impl ConverterPanel {
                     None
                 })
                 .unwrap_or_else(|| {
-                    let f = names.first().cloned().unwrap_or_default();
-                    let t = names.get(1).cloned().unwrap_or(f.clone());
+                    let f = keys.first().cloned().unwrap_or_default();
+                    let t = keys.get(1).cloned().unwrap_or(f.clone());
                     (f, t)
                 })
         };
-        Self::select_name(&self.from_dd, &from);
-        Self::select_name(&self.to_dd, &to);
+        self.select_key(&self.from_dd, &from);
+        self.select_key(&self.to_dd, &to);
         self.state.borrow_mut().updating = false;
 
         // Currency category: check rate availability.
@@ -436,8 +448,8 @@ impl ConverterPanel {
     #[allow(dead_code)]
     fn current_units(self: &Rc<Self>) -> (Option<String>, Option<String>) {
         (
-            Self::selected_name(&self.from_dd),
-            Self::selected_name(&self.to_dd),
+            self.selected_key(&self.from_dd),
+            self.selected_key(&self.to_dd),
         )
     }
 
@@ -452,8 +464,8 @@ impl ConverterPanel {
         self.state.borrow_mut().updating = true;
         let cat = self.state.borrow().category.clone();
 
-        let from = Self::selected_name(&self.from_dd);
-        let to = Self::selected_name(&self.to_dd);
+        let from = self.selected_key(&self.from_dd);
+        let to = self.selected_key(&self.to_dd);
         let focused_from = self.from_entry.has_focus();
         let focused_to = self.to_entry.has_focus();
 
@@ -616,8 +628,8 @@ impl ConverterPanel {
         };
         // DMS formatting when either endpoint is the DMS angle unit.
         let dms = [
-            Self::selected_name(&self.from_dd),
-            Self::selected_name(&self.to_dd),
+            self.selected_key(&self.from_dd),
+            self.selected_key(&self.to_dd),
         ]
         .iter()
         .any(|n| n.as_deref() == Some("Degrees (D°M′S″)"));
@@ -670,11 +682,11 @@ impl ConverterPanel {
     }
 
     pub fn swap(self: &Rc<Self>, win: &Rc<CalcWindow>) {
-        let f = Self::selected_name(&self.from_dd);
-        let t = Self::selected_name(&self.to_dd);
+        let f = self.selected_key(&self.from_dd);
+        let t = self.selected_key(&self.to_dd);
         if let (Some(f), Some(t)) = (f, t) {
-            Self::select_name(&self.from_dd, &t);
-            Self::select_name(&self.to_dd, &f);
+            self.select_key(&self.from_dd, &t);
+            self.select_key(&self.to_dd, &f);
             self.remember_pair(win);
             self.recompute(win);
         }
@@ -688,8 +700,8 @@ impl ConverterPanel {
         }
         let cat = self.state.borrow().category.clone();
         if let (Some(f), Some(t)) = (
-            Self::selected_name(&self.from_dd),
-            Self::selected_name(&self.to_dd),
+            self.selected_key(&self.from_dd),
+            self.selected_key(&self.to_dd),
         ) {
             self.state.borrow_mut().session_units.insert(cat, (f, t));
         }
@@ -753,8 +765,8 @@ impl ConverterPanel {
         let codes: Vec<String> = {
             let settings = win.settings.borrow();
             [
-                Self::selected_name(&self.from_dd),
-                Self::selected_name(&self.to_dd),
+                self.selected_key(&self.from_dd),
+                self.selected_key(&self.to_dd),
             ]
             .into_iter()
             .flatten()
