@@ -18,7 +18,11 @@ depends=('gtk4' 'libadwaita')
 makedepends=('cargo' 'm4')
 options=('!lto')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/$_tag.tar.gz")
-sha256sums=('413a07a5b2b9f64bd8eed4203f24632c55810f315dcd8d4df89c5b07d98fddee')
+# SKIP until the v51.1.3 tag is pushed; re-pin with `updpkgsums` (or the
+# release source archive) right after tagging. Must be SKIP whenever a
+# tag is cut: the Arch CI job verifies the tag's own archive against
+# this file, and a checksum pinned to an older tag would fail it.
+sha256sums=('SKIP')
 
 prepare() {
   cd "$pkgname-$pkgver"
