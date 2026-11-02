@@ -68,6 +68,36 @@ for m in re.finditer(r'\("(?:automatic|fixed|scientific|engineering)",\s*"([^"]+
     line = wtext[: m.start()].count("\n") + 1
     add(m.group(1), f"{rel(win)}:{line}")
 
+# 1c. More variable-backed literals (Codex P2 on PR #4): the base-name
+#     tuples in keypad.rs (also the msgids for win.rs's base_name match
+#     arms), the base list in converter.rs, the financial parameter
+#     labels and the shortcut titles in dialogs.rs.
+keypad = root / "crates/radix-gui/src/keypad.rs"
+ktext = keypad.read_text()
+for m in re.finditer(r"for \(name, base\) in \[(.*?)\]", ktext, re.S):
+    for i, t in enumerate(re.finditer(r'\("([^"]+)",\s*\d+\)', m.group(1))):
+        line = ktext[: m.start()].count("\n") + i + 1
+        add(t.group(1), f"{rel(keypad)}:{line}")
+conv = root / "crates/radix-gui/src/converter.rs"
+ctext = conv.read_text()
+for m in re.finditer(
+    r'\["(?:Binary|Octal|Decimal|Hexadecimal)"(?:\s*,\s*"(?:Binary|Octal|Decimal|Hexadecimal)")+\]',
+    ctext,
+):
+    for i, t in enumerate(re.finditer(r'"((?:Binary|Octal|Decimal|Hexadecimal))"', m.group(0))):
+        line = ctext[: m.start()].count("\n") + 1
+        add(t.group(1), f"{rel(conv)}:{line}")
+dlg = root / "crates/radix-gui/src/dialogs.rs"
+dtext = dlg.read_text()
+for m in re.finditer(r"params:\s*&\[(.*?)\]", dtext, re.S):
+    for t in re.finditer(r'"((?:[^"\\]|\\.)*)"', m.group(1)):
+        line = dtext[: m.start()].count("\n") + 1
+        add(json.loads(f'"{t.group(1)}"'), f"{rel(dlg)}:{line}")
+for m in re.finditer(r"\[\(&str, &str\); \d+\] = \[(.*?)\];", dtext, re.S):
+    for i, t in enumerate(re.finditer(r'\("([^"]+)",\s*"[^"]*"\)', m.group(1))):
+        line = dtext[: m.start()].count("\n") + i + 1
+        add(t.group(1), f"{rel(dlg)}:{line}")
+
 # 2. Unit display names: second string literal inside each u!(...) call.
 units = root / "crates/radix-core/src/units.rs"
 text = units.read_text()

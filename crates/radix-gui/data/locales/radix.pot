@@ -20,6 +20,10 @@ msgstr ""
 msgid "Advanced"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:262
+msgid "Advanced mode"
+msgstr ""
+
 #: crates/radix-gui/src/prefs.rs:104
 msgid "All currencies"
 msgstr ""
@@ -58,6 +62,14 @@ msgstr ""
 
 #: crates/radix-gui/src/win.rs:90
 msgid "Basic"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:261
+msgid "Basic mode"
+msgstr ""
+
+#: crates/radix-gui/src/converter.rs:161
+msgid "Binary"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:596
@@ -124,8 +136,31 @@ msgstr ""
 msgid "Clear History"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:251
+msgid "Clear display"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:256
+msgid "Clear history"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:258
+msgid "Close window"
+msgstr ""
+
 #: crates/radix-gui/src/win.rs:95
 msgid "Conversion"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:252
+msgid "Copy"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:24
+#: crates/radix-gui/src/dialogs.rs:36
+#: crates/radix-gui/src/dialogs.rs:56
+#: crates/radix-gui/src/dialogs.rs:60
+msgid "Cost"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:229
@@ -174,6 +209,8 @@ msgid "Decade"
 msgstr ""
 
 #: crates/radix-gui/src/keypad.rs:903
+#: crates/radix-gui/src/keypad.rs:893
+#: crates/radix-gui/src/converter.rs:161
 msgid "Decimal"
 msgstr ""
 
@@ -270,6 +307,10 @@ msgstr ""
 msgid "Financial"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:263
+msgid "Financial mode"
+msgstr ""
+
 #: crates/radix-gui/src/win.rs:2159
 msgid "Fixed"
 msgstr ""
@@ -288,6 +329,12 @@ msgstr ""
 
 #: crates/radix-gui/src/popovers.rs:199
 msgid "Functions"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:20
+#: crates/radix-gui/src/dialogs.rs:52
+#: crates/radix-gui/src/dialogs.rs:64
+msgid "Future Value"
 msgstr ""
 
 #: crates/radix-gui/src/dialogs.rs:249
@@ -340,6 +387,11 @@ msgstr ""
 msgid "Hertz"
 msgstr ""
 
+#: crates/radix-gui/src/keypad.rs:894
+#: crates/radix-gui/src/converter.rs:161
+msgid "Hexadecimal"
+msgstr ""
+
 #: crates/radix-core/src/units.rs:373
 msgid "Hour"
 msgstr ""
@@ -375,6 +427,10 @@ msgstr ""
 #: crates/radix-gui/src/dialogs.rs:244
 #: crates/radix-gui/src/win.rs:2171
 msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:265
+msgid "Keyboard mode"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:611
@@ -437,6 +493,10 @@ msgstr ""
 msgid "Length"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:24
+msgid "Life"
+msgstr ""
+
 #: crates/radix-core/src/units.rs:97
 msgid "Lightyear"
 msgstr ""
@@ -447,6 +507,10 @@ msgstr ""
 
 #: crates/radix-gui/src/win.rs:290
 msgid "Main Menu"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:36
+msgid "Margin"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:825
@@ -557,6 +621,10 @@ msgstr ""
 msgid "New Window"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:257
+msgid "New window"
+msgstr ""
+
 #: crates/radix-core/src/units.rs:598
 msgid "Nibble"
 msgstr ""
@@ -573,8 +641,19 @@ msgstr ""
 msgid "Number Base"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:28
+#: crates/radix-gui/src/dialogs.rs:44
+#: crates/radix-gui/src/dialogs.rs:52
+msgid "Number of Periods"
+msgstr ""
+
 #: crates/radix-gui/src/prefs.rs:27
 msgid "Number of decimals"
+msgstr ""
+
+#: crates/radix-gui/src/keypad.rs:892
+#: crates/radix-gui/src/converter.rs:161
+msgid "Octal"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:325
@@ -589,12 +668,35 @@ msgstr ""
 msgid "Pascal"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:253
+msgid "Paste"
+msgstr ""
+
 #: crates/radix-core/src/units.rs:707
 msgid "Pebibit"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:713
 msgid "Pebibyte"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:24
+#: crates/radix-gui/src/dialogs.rs:60
+msgid "Period"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:20
+#: crates/radix-gui/src/dialogs.rs:28
+#: crates/radix-gui/src/dialogs.rs:40
+#: crates/radix-gui/src/dialogs.rs:44
+#: crates/radix-gui/src/dialogs.rs:64
+msgid "Periodic Interest Rate"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:28
+#: crates/radix-gui/src/dialogs.rs:44
+#: crates/radix-gui/src/dialogs.rs:64
+msgid "Periodic Payment"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:695
@@ -615,15 +717,29 @@ msgstr ""
 
 #: crates/radix-gui/src/prefs.rs:13
 #: crates/radix-gui/src/win.rs:2170
+#: crates/radix-gui/src/dialogs.rs:260
 msgid "Preferences"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:20
+#: crates/radix-gui/src/dialogs.rs:52
+msgid "Present Value"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:831
 msgid "Pressure"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:40
+msgid "Principal"
+msgstr ""
+
 #: crates/radix-gui/src/win.rs:93
 msgid "Programming"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:264
+msgid "Programming mode"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:259
@@ -631,6 +747,7 @@ msgid "Quart"
 msgstr ""
 
 #: crates/radix-gui/src/win.rs:2179
+#: crates/radix-gui/src/dialogs.rs:259
 msgid "Quit"
 msgstr ""
 
@@ -643,8 +760,17 @@ msgstr ""
 msgid "Radians"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:255
+msgid "Redo"
+msgstr ""
+
 #: crates/radix-gui/src/win.rs:2167
 msgid "Result Format"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:56
+#: crates/radix-gui/src/dialogs.rs:60
+msgid "Salvage Value"
 msgstr ""
 
 #: crates/radix-gui/src/win.rs:2160
@@ -657,6 +783,10 @@ msgstr ""
 
 #: crates/radix-gui/src/prefs.rs:127
 msgid "Show in conversion lists first"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:250
+msgid "Solve"
 msgstr ""
 
 #: crates/radix-core/src/units.rs:827
@@ -719,6 +849,10 @@ msgstr ""
 msgid "Terahertz"
 msgstr ""
 
+#: crates/radix-gui/src/dialogs.rs:40
+msgid "Term"
+msgstr ""
+
 #: crates/radix-gui/src/prefs.rs:38
 msgid "Thousands separators"
 msgstr ""
@@ -741,6 +875,15 @@ msgstr ""
 
 #: crates/radix-core/src/units.rs:277
 msgid "US Pint"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:254
+msgid "Undo"
+msgstr ""
+
+#: crates/radix-gui/src/dialogs.rs:56
+#: crates/radix-gui/src/dialogs.rs:60
+msgid "Useful Life"
 msgstr ""
 
 #: crates/radix-gui/src/popovers.rs:19

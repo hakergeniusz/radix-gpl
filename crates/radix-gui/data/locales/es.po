@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-11-02 19:30+0000\n"
+"PO-Revision-Date: 2026-11-02 20:10+0000\n"
 "Last-Translator: ZCode (GLM-5.3-Flash)\n"
 "Language-Team: es\n""Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -18,6 +18,9 @@ msgstr "Acre"
 
 msgid "Advanced"
 msgstr "Avanzado"
+
+msgid "Advanced mode"
+msgstr "Modo avanzado"
 
 msgid "All currencies"
 msgstr "Todas las monedas"
@@ -48,6 +51,12 @@ msgstr "Bar"
 
 msgid "Basic"
 msgstr "Básico"
+
+msgid "Basic mode"
+msgstr "Modo básico"
+
+msgid "Binary"
+msgstr "Binario"
 
 msgid "Bit"
 msgstr "Bit"
@@ -97,8 +106,23 @@ msgstr "Carácter o código"
 msgid "Clear History"
 msgstr "Vaciar histórico"
 
+msgid "Clear display"
+msgstr "Borrar la pantalla"
+
+msgid "Clear history"
+msgstr "Vaciar el histórico"
+
+msgid "Close window"
+msgstr "Cerrar la ventana"
+
 msgid "Conversion"
 msgstr "Conversión"
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "Cost"
+msgstr "Coste"
 
 msgid "Cubic Meter"
 msgstr "Metro cúbico"
@@ -205,6 +229,9 @@ msgstr "Pies por segundo"
 msgid "Financial"
 msgstr "Financiero"
 
+msgid "Financial mode"
+msgstr "Modo financiero"
+
 msgid "Fixed"
 msgstr "Fija"
 
@@ -219,6 +246,9 @@ msgstr "Frecuencia"
 
 msgid "Functions"
 msgstr "Funciones"
+
+msgid "Future Value"
+msgstr "Valor futuro"
 
 msgid "General"
 msgstr "General"
@@ -256,6 +286,9 @@ msgstr "Ayuda"
 msgid "Hertz"
 msgstr "Hercio"
 
+msgid "Hexadecimal"
+msgstr "Hexadecimal"
+
 msgid "Hour"
 msgstr "Hora"
 
@@ -282,6 +315,9 @@ msgstr "Teclado"
 
 msgid "Keyboard Shortcuts"
 msgstr "Atajos del teclado"
+
+msgid "Keyboard mode"
+msgstr "Modo de teclado"
 
 msgid "Kibibit"
 msgstr "Kibibit"
@@ -328,6 +364,9 @@ msgstr "Delta de Kronecker"
 msgid "Length"
 msgstr "Longitud"
 
+msgid "Life"
+msgstr "Vida"
+
 msgid "Lightyear"
 msgstr "Año luz"
 
@@ -336,6 +375,9 @@ msgstr "Litro"
 
 msgid "Main Menu"
 msgstr "Menú principal"
+
+msgid "Margin"
+msgstr "Margen"
 
 msgid "Mass"
 msgstr "Masa"
@@ -418,6 +460,9 @@ msgstr "Nunca"
 msgid "New Window"
 msgstr "Ventana nueva"
 
+msgid "New window"
+msgstr "Ventana nueva"
+
 msgid "Nibble"
 msgstr "Nibble"
 
@@ -430,8 +475,14 @@ msgstr "Ninguna"
 msgid "Number Base"
 msgstr "Base numérica"
 
+msgid "Number of Periods"
+msgstr "Número de períodos"
+
 msgid "Number of decimals"
 msgstr "Número de decimales"
+
+msgid "Octal"
+msgstr "Octal"
 
 msgid "Ounce"
 msgstr "Onza"
@@ -442,11 +493,23 @@ msgstr "Pársec"
 msgid "Pascal"
 msgstr "Pascal"
 
+msgid "Paste"
+msgstr "Pegar"
+
 msgid "Pebibit"
 msgstr "Pebibit"
 
 msgid "Pebibyte"
 msgstr "Pebibyte"
+
+msgid "Period"
+msgstr "Período"
+
+msgid "Periodic Interest Rate"
+msgstr "Tipo de interés periódico"
+
+msgid "Periodic Payment"
+msgstr "Pago periódico"
 
 msgid "Petabit"
 msgstr "Petabit"
@@ -463,11 +526,20 @@ msgstr "Libra"
 msgid "Preferences"
 msgstr "Preferencias"
 
+msgid "Present Value"
+msgstr "Valor actual"
+
 msgid "Pressure"
 msgstr "Presión"
 
+msgid "Principal"
+msgstr "Principal"
+
 msgid "Programming"
 msgstr "Programación"
+
+msgid "Programming mode"
+msgstr "Modo de programación"
 
 msgid "Quart"
 msgstr "Cuarto"
@@ -481,8 +553,14 @@ msgstr "Unidad de rack"
 msgid "Radians"
 msgstr "Radianes"
 
+msgid "Redo"
+msgstr "Rehacer"
+
 msgid "Result Format"
 msgstr "Formato del resultado"
+
+msgid "Salvage Value"
+msgstr "Valor residual"
 
 msgid "Scientific"
 msgstr "Científico"
@@ -492,6 +570,9 @@ msgstr "Segundo"
 
 msgid "Show in conversion lists first"
 msgstr "Mostrar primero en las listas de conversión"
+
+msgid "Solve"
+msgstr "Resolver"
 
 msgid "Speed"
 msgstr "Velocidad"
@@ -538,6 +619,9 @@ msgstr "Teraocteto"
 msgid "Terahertz"
 msgstr "Terahercio"
 
+msgid "Term"
+msgstr "Plazo"
+
 msgid "Thousands separators"
 msgstr "Separadores de miles"
 
@@ -555,6 +639,12 @@ msgstr "Galón estadounidense"
 
 msgid "US Pint"
 msgstr "Pinta estadounidense"
+
+msgid "Undo"
+msgstr "Deshacer"
+
+msgid "Useful Life"
+msgstr "Vida útil"
 
 msgid "Variable name"
 msgstr "Nombre de la variable"

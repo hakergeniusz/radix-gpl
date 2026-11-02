@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-11-02 19:30+0000\n"
+"PO-Revision-Date: 2026-11-02 20:10+0000\n"
 "Last-Translator: ZCode (GLM-5.3-Flash)\n"
 "Language-Team: it\n""Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -18,6 +18,9 @@ msgstr "Acro"
 
 msgid "Advanced"
 msgstr "Avanzato"
+
+msgid "Advanced mode"
+msgstr "Modalità avanzata"
 
 msgid "All currencies"
 msgstr "Tutte le valute"
@@ -48,6 +51,12 @@ msgstr "Bar"
 
 msgid "Basic"
 msgstr "Base"
+
+msgid "Basic mode"
+msgstr "Modalità base"
+
+msgid "Binary"
+msgstr "Binario"
 
 msgid "Bit"
 msgstr "Bit"
@@ -97,8 +106,23 @@ msgstr "Carattere o codice"
 msgid "Clear History"
 msgstr "Svuota cronologia"
 
+msgid "Clear display"
+msgstr "Cancella il display"
+
+msgid "Clear history"
+msgstr "Svuota la cronologia"
+
+msgid "Close window"
+msgstr "Chiudi la finestra"
+
 msgid "Conversion"
 msgstr "Conversione"
+
+msgid "Copy"
+msgstr "Copia"
+
+msgid "Cost"
+msgstr "Costo"
 
 msgid "Cubic Meter"
 msgstr "Metro cubo"
@@ -205,6 +229,9 @@ msgstr "Piedi al secondo"
 msgid "Financial"
 msgstr "Finanziario"
 
+msgid "Financial mode"
+msgstr "Modalità finanziaria"
+
 msgid "Fixed"
 msgstr "Fisso"
 
@@ -219,6 +246,9 @@ msgstr "Frequenza"
 
 msgid "Functions"
 msgstr "Funzioni"
+
+msgid "Future Value"
+msgstr "Valore futuro"
 
 msgid "General"
 msgstr "Generale"
@@ -256,6 +286,9 @@ msgstr "Aiuto"
 msgid "Hertz"
 msgstr "Hertz"
 
+msgid "Hexadecimal"
+msgstr "Esadecimale"
+
 msgid "Hour"
 msgstr "Ora"
 
@@ -282,6 +315,9 @@ msgstr "Tastiera"
 
 msgid "Keyboard Shortcuts"
 msgstr "Scorciatoie da tastiera"
+
+msgid "Keyboard mode"
+msgstr "Modalità tastiera"
 
 msgid "Kibibit"
 msgstr "Kibibit"
@@ -328,6 +364,9 @@ msgstr "Delta di Kronecker"
 msgid "Length"
 msgstr "Lunghezza"
 
+msgid "Life"
+msgstr "Vita"
+
 msgid "Lightyear"
 msgstr "Anno luce"
 
@@ -336,6 +375,9 @@ msgstr "Litro"
 
 msgid "Main Menu"
 msgstr "Menu principale"
+
+msgid "Margin"
+msgstr "Margine"
 
 msgid "Mass"
 msgstr "Massa"
@@ -418,6 +460,9 @@ msgstr "Mai"
 msgid "New Window"
 msgstr "Nuova finestra"
 
+msgid "New window"
+msgstr "Nuova finestra"
+
 msgid "Nibble"
 msgstr "Nibble"
 
@@ -430,8 +475,14 @@ msgstr "Nessuna"
 msgid "Number Base"
 msgstr "Base numerica"
 
+msgid "Number of Periods"
+msgstr "Numero di periodi"
+
 msgid "Number of decimals"
 msgstr "Numero di decimali"
+
+msgid "Octal"
+msgstr "Ottale"
 
 msgid "Ounce"
 msgstr "Oncia"
@@ -442,11 +493,23 @@ msgstr "Parsec"
 msgid "Pascal"
 msgstr "Pascal"
 
+msgid "Paste"
+msgstr "Incolla"
+
 msgid "Pebibit"
 msgstr "Pebibit"
 
 msgid "Pebibyte"
 msgstr "Pebibyte"
+
+msgid "Period"
+msgstr "Periodo"
+
+msgid "Periodic Interest Rate"
+msgstr "Tasso di interesse periodico"
+
+msgid "Periodic Payment"
+msgstr "Pagamento periodico"
 
 msgid "Petabit"
 msgstr "Petabit"
@@ -463,11 +526,20 @@ msgstr "Libbra"
 msgid "Preferences"
 msgstr "Preferenze"
 
+msgid "Present Value"
+msgstr "Valore attuale"
+
 msgid "Pressure"
 msgstr "Pressione"
 
+msgid "Principal"
+msgstr "Capitale"
+
 msgid "Programming"
 msgstr "Programmazione"
+
+msgid "Programming mode"
+msgstr "Modalità di programmazione"
 
 msgid "Quart"
 msgstr "Quarto"
@@ -481,8 +553,14 @@ msgstr "Unità rack"
 msgid "Radians"
 msgstr "Radianti"
 
+msgid "Redo"
+msgstr "Ripeti"
+
 msgid "Result Format"
 msgstr "Formato del risultato"
+
+msgid "Salvage Value"
+msgstr "Valore residuo"
 
 msgid "Scientific"
 msgstr "Scientifico"
@@ -492,6 +570,9 @@ msgstr "Secondo"
 
 msgid "Show in conversion lists first"
 msgstr "Mostra per prime negli elenchi di conversione"
+
+msgid "Solve"
+msgstr "Risolvi"
 
 msgid "Speed"
 msgstr "Velocità"
@@ -538,6 +619,9 @@ msgstr "Terabyte"
 msgid "Terahertz"
 msgstr "Terahertz"
 
+msgid "Term"
+msgstr "Termine"
+
 msgid "Thousands separators"
 msgstr "Separatori delle migliaia"
 
@@ -555,6 +639,12 @@ msgstr "Gallone statunitense"
 
 msgid "US Pint"
 msgstr "Pinta statunitense"
+
+msgid "Undo"
+msgstr "Annulla"
+
+msgid "Useful Life"
+msgstr "Vita utile"
 
 msgid "Variable name"
 msgstr "Nome della variabile"
