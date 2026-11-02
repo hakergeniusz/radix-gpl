@@ -1,0 +1,746 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: radix 51.1.2\n"
+"Report-Msgid-Bugs-To: https://github.com/hakergeniusz/radix-gpl/issues\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-11-02 19:30+0000\n"
+"Last-Translator: ZCode (GLM-5.3-Flash)\n"
+"Language-Team: ja\n""Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "About Calculator"
+msgstr "この計算機について"
+
+msgid "Acre"
+msgstr "エーカー"
+
+msgid "Advanced"
+msgstr "詳細"
+
+msgid "All currencies"
+msgstr "すべての通貨"
+
+msgid "Angle"
+msgstr "角度"
+
+msgid "Angle units"
+msgstr "角度の単位"
+
+msgid "Area"
+msgstr "面積"
+
+msgid "Astronomical Unit"
+msgstr "天文単位"
+
+msgid "Atmosphere"
+msgstr "気圧"
+
+msgid "Automatic"
+msgstr "自動"
+
+msgid "BTU"
+msgstr "BTU"
+
+msgid "Bar"
+msgstr "バール"
+
+msgid "Basic"
+msgstr "基本"
+
+msgid "Bit"
+msgstr "ビット"
+
+msgid "Bit editing needs an integer value"
+msgstr "ビット編集には整数値が必要です"
+
+msgid "Both"
+msgstr "両方"
+
+msgid "Byte"
+msgstr "バイト"
+
+msgid "Cable"
+msgstr "ケーブル"
+
+msgid "Calculate"
+msgstr "計算"
+
+msgid "Calculation"
+msgstr "計算"
+
+msgid "Calorie"
+msgstr "カロリー"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Centimeter"
+msgstr "センチメートル"
+
+msgid "Century"
+msgstr "世紀"
+
+msgid "Change Base"
+msgstr "基数を変更"
+
+msgid "Change Word Size"
+msgstr "ワードサイズを変更"
+
+msgid "Character"
+msgstr "文字"
+
+msgid "Character or code"
+msgstr "文字またはコード"
+
+msgid "Clear History"
+msgstr "履歴を消去"
+
+msgid "Conversion"
+msgstr "変換"
+
+msgid "Cubic Meter"
+msgstr "立方メートル"
+
+msgid "Cup"
+msgstr "カップ"
+
+msgid "Currency"
+msgstr "通貨"
+
+msgid "Currency Code"
+msgstr "通貨コード"
+
+msgid "Currency Name"
+msgstr "通貨名"
+
+msgid "Currency completion"
+msgstr "通貨の補完"
+
+msgid "Currency display"
+msgstr "通貨の表示"
+
+msgid "Currency refresh interval"
+msgstr "為替レートの更新間隔"
+
+msgid "Daily"
+msgstr "毎日"
+
+msgid "Day"
+msgstr "日"
+
+msgid "Decade"
+msgstr "10 年"
+
+msgid "Decimal"
+msgstr "10 進数"
+
+msgid "Degree Celsius"
+msgstr "摂氏"
+
+msgid "Degree Fahrenheit"
+msgstr "華氏"
+
+msgid "Degree Kelvin"
+msgstr "ケルビン"
+
+msgid "Degree Rankine"
+msgstr "ランキン度"
+
+msgid "Degrees"
+msgstr "度"
+
+msgid "Degrees (Decimal)"
+msgstr "度 (10 進)"
+
+msgid "Degrees (D°M′S″)"
+msgstr "度 (D°M′S″)"
+
+msgid "Digital Storage"
+msgstr "デジタルストレージ"
+
+msgid "Duration"
+msgstr "期間"
+
+msgid "Electronvolt"
+msgstr "電子ボルト"
+
+msgid "Energy"
+msgstr "エネルギー"
+
+msgid "Engineering"
+msgstr "工学"
+
+msgid "Erg"
+msgstr "エルグ"
+
+msgid "Exabit"
+msgstr "エクサビット"
+
+msgid "Exabyte"
+msgstr "エクサバイト"
+
+msgid "Exbibit"
+msgstr "エクスビビット"
+
+msgid "Exbibyte"
+msgstr "エクスビバイト"
+
+msgid "Exchange Rate Data Providers"
+msgstr "為替レートの提供元"
+
+msgid "Fathom"
+msgstr "ファゾム"
+
+msgid "Favorite Currencies"
+msgstr "お気に入りの通貨"
+
+msgid "Favorites only"
+msgstr "お気に入りのみ"
+
+msgid "Feet per second"
+msgstr "フィート毎秒"
+
+msgid "Financial"
+msgstr "財務"
+
+msgid "Fixed"
+msgstr "固定"
+
+msgid "Foot"
+msgstr "フィート"
+
+msgid "Foot-pound"
+msgstr "フィートポンド"
+
+msgid "Frequency"
+msgstr "周波数"
+
+msgid "Functions"
+msgstr "関数"
+
+msgid "General"
+msgstr "全般"
+
+msgid "Gibibit"
+msgstr "ギビビット"
+
+msgid "Gibibyte"
+msgstr "ギビバイト"
+
+msgid "Gigabit"
+msgstr "ギガビット"
+
+msgid "Gigabyte"
+msgstr "ギガバイト"
+
+msgid "Gigahertz"
+msgstr "ギガヘルツ"
+
+msgid "Gradians"
+msgstr "グラード"
+
+msgid "Gram"
+msgstr "グラム"
+
+msgid "Hectare"
+msgstr "ヘクタール"
+
+msgid "Hectopascal"
+msgstr "ヘクトパスカル"
+
+msgid "Help"
+msgstr "ヘルプ"
+
+msgid "Hertz"
+msgstr "ヘルツ"
+
+msgid "Hour"
+msgstr "時間"
+
+msgid "Imperial Gallon"
+msgstr "英ガロン"
+
+msgid "Imperial Pint"
+msgstr "英パイント"
+
+msgid "Inch"
+msgstr "インチ"
+
+msgid "Insert"
+msgstr "挿入"
+
+msgid "Invalid variable name"
+msgstr "変数名が不正です"
+
+msgid "Joule"
+msgstr "ジュール"
+
+msgid "Keyboard"
+msgstr "キーボード"
+
+msgid "Keyboard Shortcuts"
+msgstr "キーボードショートカット"
+
+msgid "Kibibit"
+msgstr "キビビット"
+
+msgid "Kibibyte"
+msgstr "キビバイト"
+
+msgid "Kilobit"
+msgstr "キロビット"
+
+msgid "Kilobyte"
+msgstr "キロバイト"
+
+msgid "Kilocalorie"
+msgstr "キロカロリー"
+
+msgid "Kilograms"
+msgstr "キログラム"
+
+msgid "Kilohertz"
+msgstr "キロヘルツ"
+
+msgid "Kilojoule"
+msgstr "キロジュール"
+
+msgid "Kilometer"
+msgstr "キロメートル"
+
+msgid "Kilometers per hour"
+msgstr "キロメートル毎時"
+
+msgid "Kilopascal"
+msgstr "キロパスカル"
+
+msgid "Kilowatt hour"
+msgstr "キロワット時"
+
+msgid "Knot"
+msgstr "ノット"
+
+msgid "Kronecker delta"
+msgstr "クロネッカーのデルタ"
+
+msgid "Length"
+msgstr "長さ"
+
+msgid "Lightyear"
+msgstr "光年"
+
+msgid "Litre"
+msgstr "リットル"
+
+msgid "Main Menu"
+msgstr "メインメニュー"
+
+msgid "Mass"
+msgstr "質量"
+
+msgid "Mebibit"
+msgstr "メビビット"
+
+msgid "Mebibyte"
+msgstr "メビバイト"
+
+msgid "Megabit"
+msgstr "メガビット"
+
+msgid "Megabyte"
+msgstr "メガバイト"
+
+msgid "Megahertz"
+msgstr "メガヘルツ"
+
+msgid "Megajoule"
+msgstr "メガジュール"
+
+msgid "Meter"
+msgstr "メートル"
+
+msgid "Meters per second"
+msgstr "メートル毎秒"
+
+msgid "Microgram"
+msgstr "マイクログラム"
+
+msgid "Microlitre"
+msgstr "マイクロリットル"
+
+msgid "Micrometer"
+msgstr "マイクロメートル"
+
+msgid "Microsecond"
+msgstr "マイクロ秒"
+
+msgid "Mile"
+msgstr "マイル"
+
+msgid "Miles per hour"
+msgstr "マイル毎時"
+
+msgid "Milligram"
+msgstr "ミリグラム"
+
+msgid "Millilitre"
+msgstr "ミリリットル"
+
+msgid "Millimeter"
+msgstr "ミリメートル"
+
+msgid "Millisecond"
+msgstr "ミリ秒"
+
+msgid "Minute"
+msgstr "分"
+
+msgid "Mode Selection"
+msgstr "モードの選択"
+
+msgid "Month"
+msgstr "月"
+
+msgid "Nanometer"
+msgstr "ナノメートル"
+
+msgid "Nanosecond"
+msgstr "ナノ秒"
+
+msgid "Nautical Mile"
+msgstr "海里"
+
+msgid "Never"
+msgstr "しない"
+
+msgid "New Window"
+msgstr "新しいウィンドウ"
+
+msgid "Nibble"
+msgstr "ニブル"
+
+msgid "No value to store"
+msgstr "保存する値がありません"
+
+msgid "None"
+msgstr "なし"
+
+msgid "Number Base"
+msgstr "基数"
+
+msgid "Number of decimals"
+msgstr "小数桁数"
+
+msgid "Ounce"
+msgstr "オンス"
+
+msgid "Parsec"
+msgstr "パーセク"
+
+msgid "Pascal"
+msgstr "パスカル"
+
+msgid "Pebibit"
+msgstr "ペビビット"
+
+msgid "Pebibyte"
+msgstr "ペビバイト"
+
+msgid "Petabit"
+msgstr "ペタビット"
+
+msgid "Petabyte"
+msgstr "ペタバイト"
+
+msgid "Point"
+msgstr "ポイント"
+
+msgid "Pound"
+msgstr "ポンド"
+
+msgid "Preferences"
+msgstr "設定"
+
+msgid "Pressure"
+msgstr "圧力"
+
+msgid "Programming"
+msgstr "プログラミング"
+
+msgid "Quart"
+msgstr "クォート"
+
+msgid "Quit"
+msgstr "終了"
+
+msgid "Rack Unit"
+msgstr "ラックユニット"
+
+msgid "Radians"
+msgstr "ラジアン"
+
+msgid "Result Format"
+msgstr "結果の形式"
+
+msgid "Scientific"
+msgstr "科学"
+
+msgid "Second"
+msgstr "秒"
+
+msgid "Show in conversion lists first"
+msgstr "変換リストの先頭に表示"
+
+msgid "Speed"
+msgstr "速度"
+
+msgid "Square Centimeter"
+msgstr "平方センチメートル"
+
+msgid "Square Foot"
+msgstr "平方フィート"
+
+msgid "Square Kilometer"
+msgstr "平方キロメートル"
+
+msgid "Square Meter"
+msgstr "平方メートル"
+
+msgid "Square Mile"
+msgstr "平方マイル"
+
+msgid "Square Millimeter"
+msgstr "平方ミリメートル"
+
+msgid "Stone"
+msgstr "ストーン"
+
+msgid "Store value"
+msgstr "値を保存"
+
+msgid "Tebibit"
+msgstr "テビビット"
+
+msgid "Tebibyte"
+msgstr "テビバイト"
+
+msgid "Temperature"
+msgstr "温度"
+
+msgid "Terabit"
+msgstr "テラビット"
+
+msgid "Terabyte"
+msgstr "テラバイト"
+
+msgid "Terahertz"
+msgstr "テラヘルツ"
+
+msgid "Thousands separators"
+msgstr "桁区切り"
+
+msgid "Tonne"
+msgstr "トン"
+
+msgid "Trailing zeroes"
+msgstr "末尾のゼロ"
+
+msgid "Troy Ounce"
+msgstr "トロイオンス"
+
+msgid "US Gallon"
+msgstr "米ガロン"
+
+msgid "US Pint"
+msgstr "米パイント"
+
+msgid "Variable name"
+msgstr "変数名"
+
+msgid "Variables"
+msgstr "変数"
+
+msgid "Volume"
+msgstr "体積"
+
+msgid "Week"
+msgstr "週"
+
+msgid "Weekly"
+msgstr "毎週"
+
+msgid "Word size"
+msgstr "ワードサイズ"
+
+msgid "Yard"
+msgstr "ヤード"
+
+msgid "Year"
+msgstr "年"
+
+msgid "Yobibit"
+msgstr "ヨビビット"
+
+msgid "Yobibyte"
+msgstr "ヨビバイト"
+
+msgid "Yottabit"
+msgstr "ヨタビット"
+
+msgid "Yottabyte"
+msgstr "ヨタバイト"
+
+msgid "Zebibit"
+msgstr "ゼビビット"
+
+msgid "Zebibyte"
+msgstr "ゼビバイト"
+
+msgid "Zettabit"
+msgstr "ゼタビット"
+
+msgid "Zettabyte"
+msgstr "ゼタバイト"
+
+msgid "absolute value"
+msgstr "絶対値"
+
+msgid "average"
+msgstr "平均"
+
+msgid "ceiling"
+msgstr "切り上げ"
+
+msgid "combinations"
+msgstr "組み合わせ"
+
+msgid "complex argument"
+msgstr "偏角"
+
+msgid "conjugate"
+msgstr "共役"
+
+msgid "cos x"
+msgstr "cos x"
+
+msgid "cosh x"
+msgstr "cosh x"
+
+msgid "cosh⁻¹ x"
+msgstr "cosh⁻¹ x"
+
+msgid "cos⁻¹ x"
+msgstr "cos⁻¹ x"
+
+msgid "floor"
+msgstr "切り捨て"
+
+msgid "fractional component"
+msgstr "小数部分"
+
+msgid "greatest common divisor"
+msgstr "最大公約数"
+
+msgid "imaginary component"
+msgstr "虚部"
+
+msgid "inHg"
+msgstr "inHg"
+
+msgid "integer component"
+msgstr "整数部分"
+
+msgid "least common multiple"
+msgstr "最小公倍数"
+
+msgid "logarithm"
+msgstr "対数"
+
+msgid "maximum value"
+msgstr "最大値"
+
+msgid "median"
+msgstr "中央値"
+
+msgid "minimum value"
+msgstr "最小値"
+
+msgid "mmHg"
+msgstr "mmHg"
+
+msgid "modular exponentiation"
+msgstr "剰余指数"
+
+msgid "modulus divide"
+msgstr "剰余除算"
+
+msgid "natural logarithm"
+msgstr "自然対数"
+
+msgid "permutations"
+msgstr "順列"
+
+msgid "population standard deviation"
+msgstr "母標準偏差"
+
+msgid "population variance"
+msgstr "母分散"
+
+msgid "psi"
+msgstr "psi"
+
+msgid "real component"
+msgstr "実部"
+
+msgid "round"
+msgstr "四捨五入"
+
+msgid "sample standard deviation"
+msgstr "標本標準偏差"
+
+msgid "sample variance"
+msgstr "標本分散"
+
+msgid "signum"
+msgstr "符号関数"
+
+msgid "sin x"
+msgstr "sin x"
+
+msgid "sinh x"
+msgstr "sinh x"
+
+msgid "sinh⁻¹ x"
+msgstr "sinh⁻¹ x"
+
+msgid "sin⁻¹ x"
+msgstr "sin⁻¹ x"
+
+msgid "square root"
+msgstr "平方根"
+
+msgid "sum"
+msgstr "合計"
+
+msgid "sum of squares"
+msgstr "平方和"
+
+msgid "swap endianness"
+msgstr "バイト順を入れ替え"
+
+msgid "tan x"
+msgstr "tan x"
+
+msgid "tanh x"
+msgstr "tanh x"
+
+msgid "tanh⁻¹ x"
+msgstr "tanh⁻¹ x"
+
+msgid "tan⁻¹ x"
+msgstr "tan⁻¹ x"
+
+msgid "two’s complement"
+msgstr "2 の補数"
