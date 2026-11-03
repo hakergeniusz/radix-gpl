@@ -282,8 +282,8 @@ pub fn open_shortcuts(parent: &impl gtk::glib::object::IsA<gtk::Window>) {
 /// reference look — app icon, name, developer, version chip and the
 /// Website / Report an Issue / Credits / Legal rows.
 pub fn open_about(parent: &impl gtk::glib::object::IsA<gtk::Window>) {
-    // doc 06 §3 mirrors upstream's About display; Radix itself is GPL-3.0-or-later
-    // (D26), so the Legal page states Radix's own license.
+    // doc 06 §3 mirrors upstream's About display; Radix itself is
+    // D34, so the Legal page states Radix's own license.
     let about = adw::AboutWindow::builder()
         .transient_for(parent)
         .modal(true)
